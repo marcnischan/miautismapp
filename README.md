@@ -1,4 +1,8 @@
-The MiAutism web app uses Brunch (see below or brunch.io) for task automation. 
+#### The MiAutism web app for the Autism alliance
+
+MiAutism is a ratings and reviews site for parents of autistic children to find barbers, restaurants, and places of interest.
+
+The MiAutism web app uses AngularJS & Brunch (see below or brunch.io) for task automation. 
 
 # angular-brunch-seed-no-fuss
 ### A starter project for AngularJS using Brunch.io
