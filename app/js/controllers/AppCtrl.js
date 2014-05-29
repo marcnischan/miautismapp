@@ -2,6 +2,9 @@ App.controller('AppCtrl', [
 	'$scope', '$location', '$resource', '$rootScope', function($scope, $location, $resource, $rootScope) {
 		// Uses the url to determine if the selected
 		// menu item should have the class active.
+		
+		
+        
 		$scope.$location = $location;
 		$scope.$watch('$location.path()', function(path) {
 			return $scope.activeNavId = path || '/';
@@ -22,4 +25,4 @@ App.controller('AppCtrl', [
 			}
 		};
 	}
-])
+]);
