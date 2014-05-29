@@ -9,7 +9,7 @@ var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.mo
 	   url: "/landing",
 	   views: {
 	       "mapView": {
-	           templateUrl: "partials/map.html",
+	           templateUrl: "partials/landing-map.html",
 	           controller: 'MapCtrl'
 	       },
 	       "mainView": {
