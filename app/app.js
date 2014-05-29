@@ -9,7 +9,7 @@ var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.mo
 	   url: "/landing",
 	   views: {
 	       "mapView": {
-	           templateUrl: "partials/map.html",
+	           templateUrl: "partials/landing-map.html",
 	           controller: 'MapCtrl'
 	       },
 	       "mainView": {
@@ -17,6 +17,18 @@ var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.mo
 	           controller: 'LandingCtrl'
 	       }
 	   }
+	}).state('review', {
+		url: "/review", 
+		views: {
+	       "mapView": {
+	           templateUrl: "partials/review-map.html",
+	           controller: 'ReviewMapCtrl'
+	       },
+	       "mainView": {
+	           templateUrl: "partials/review.html",
+	           controller: 'ReviewCtrl'
+	       }
+		}
 	}).state('todo', {
 		url: "/todo", 
 		views: {
