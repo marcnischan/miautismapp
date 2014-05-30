@@ -4556,6 +4556,7 @@ button.close {
   display: inline;
   zoom: 1; }
 
+@import url("reset.css");
 body {
   padding: 70px 5px 0; }
 
@@ -4564,6 +4565,15 @@ body {
 
 .nav, .pagination, .carousel, .panel-title a {
   cursor: pointer; }
+
+.search-result .business-type {
+  width: 15%;
+  float: left;
+  background-color: #f6f6f6; }
+.search-result .business-listing {
+  width: 85%;
+  float: right;
+  background-color: #e1e7f0; }
 
 
 /*# sourceMappingURL=app.css.map*/
