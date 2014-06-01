@@ -10,10 +10,11 @@
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body ng-controller="AppCtrl">
-        <div ng-include="'/partials/nav.html'"></div>
+        <div ng-include="/partials/nav.html"></div>
 
         <div class="wrapper">
             <div class="container main-content">
+                <div ui-view="mapView"></div>
                 <div ui-view="mainView"></div>
             </div>
             <div class="push"></div>
