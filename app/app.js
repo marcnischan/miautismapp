@@ -35,6 +35,10 @@ var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.mo
 			"mainView": {
 				templateUrl: "partials/todo.html",
 				controller: 'TodoCtrl'
+			},
+			"reviewsView": {
+                templateUrl: "partials/reviews.html",
+                controller: 'reviewsDB'
 			}
 		}
 	}).state('view', {

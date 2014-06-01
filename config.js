@@ -1,3 +1,4 @@
+
 var path = require('path');
 
 exports.config = {
@@ -27,6 +28,7 @@ exports.config = {
 
 						// angular
 						case 'bower_components/angular/angular.js':
+						case 'bower_components/angular-animate/angular-animate.min.js':
 						case 'bower_components/angular-resource/angular-resource.js':
 						case 'bower_components/angular-sanitize/angular-sanitize.js':
 						case 'bower_components/angular-ui-router/release/angular-ui-router.js':
