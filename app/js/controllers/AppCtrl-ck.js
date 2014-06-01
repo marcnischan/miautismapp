@@ -1,0 +1,1 @@
+App.controller("AppCtrl",["$scope","$location","$resource","$rootScope",function(e,t,n,r){e.$location=t;e.$watch("$location.path()",function(t){return e.activeNavId=t||"/"});return e.getClass=function(t){return e.activeNavId.substring(0,t.length)===t?"active":""}}]);
