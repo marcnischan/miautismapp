@@ -50,6 +50,7 @@ var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.mo
 	// Without server side support html5 must be disabled.
 	return $locationProvider.html5Mode(false);
 }]);
+App.controller("AppCtrl",["$scope","$location","$resource","$rootScope",function(e,t,n,r){e.$location=t;e.$watch("$location.path()",function(t){return e.activeNavId=t||"/"});return e.getClass=function(t){return e.activeNavId.substring(0,t.length)===t?"active":""}}]);
 App.controller('AppCtrl', [
 	'$scope', '$location', '$resource', '$rootScope', function($scope, $location, $resource, $rootScope) {
 		// Uses the url to determine if the selected
