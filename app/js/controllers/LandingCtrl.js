@@ -2,6 +2,7 @@ App.controller('LandingCtrl', ['$scope', function($scope) {
 $scope.locations = 
     [                      
         { location: {
+        id: 0000001,
         reviewer: {
             firstname: "Renee",
             lastname: "B",
@@ -23,6 +24,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: 0000002,
         reviewer: {
             firstname: "Ben",
             lastname: "D",
