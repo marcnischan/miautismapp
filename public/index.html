@@ -9,17 +9,18 @@
         <meta name="fragment" content="!" />
         <link rel="stylesheet" href="css/app.css">
     </head>
-    <body ng-controller="AppCtrl">
+    <body>
         <div ng-include="'/partials/nav.html'"></div>
 
         <div class="wrapper">
-            <div class="container main-content">
+            <div ng-controller="AppCtrl" class="container main-content">
                 <div ui-view="mapView"></div>
                 <div ui-view="mainView"></div>
             </div>
         </div>
-        
+
         <footer class="footer">
+            
         </footer>
         <script src="/js/vendor.js"></script>
         <script src="/js/app.js"></script>

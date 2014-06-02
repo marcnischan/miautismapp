@@ -17,6 +17,18 @@ var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.mo
 	           controller: 'LandingCtrl'
 	       }
 	   }
+	}).state('review', {
+		url: "/review", 
+		views: {
+	       "mapView": {
+	           templateUrl: "partials/review-map.html",
+	           controller: 'ReviewMapCtrl'
+	       },
+	       "mainView": {
+	           templateUrl: "partials/review.html",
+	           controller: 'ReviewCtrl'
+	       }
+		}
 	}).state('todo', {
 		url: "/todo", 
 		views: {
@@ -38,6 +50,7 @@ var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.mo
 	// Without server side support html5 must be disabled.
 	return $locationProvider.html5Mode(false);
 }]);
+App.controller("AppCtrl",["$scope","$location","$resource","$rootScope",function(e,t,n,r){e.$location=t;e.$watch("$location.path()",function(t){return e.activeNavId=t||"/"});return e.getClass=function(t){return e.activeNavId.substring(0,t.length)===t?"active":""}}]);
 App.controller('AppCtrl', [
 	'$scope', '$location', '$resource', '$rootScope', function($scope, $location, $resource, $rootScope) {
 		// Uses the url to determine if the selected
@@ -350,6 +363,37 @@ App.controller('ModalCtrl', ['$scope', function($scope) {
 App.controller('MyCtrl', ['$scope', function($scope) {
 	$scope.onePlusOne = 2;
 	$scope.greeting = "Hello World";
+}]);
+App.controller('ReviewCtrl', ['$scope', function($scope) {
+$scope.locations = [{
+ 
+        location: {
+            reviewer: {
+                firstname: "Renee",
+                lastname: "B",
+                email: "rlboogren@hotmail.com"
+            },
+            business: {
+                category: "Barbershop/hair salon",
+                name: "Great Clips",
+                town: "Clawson",
+                county: "Oakland",
+                rating: {
+                    overall: "4",
+                    sights: "3",
+                    sounds: "5",
+                    friendliness: "4"
+                },
+                comments: "My son is a little nervous when it comes to getting his haircut.  He is very motivated by suckers and the staff at Great Clips are so nice to him and cut his hair quickly and let him pick suckers when he is finished."
+                }
+         }
+      }]
+}]);
+App.controller('ReviewMapCtrl', ['$scope', function($scope) {
+	$scope.map = "/img/gmap.jpg";
+	
+	
+	
 }]);
 App.controller('TodoCtrl', ['$scope', function($scope) {
 	$scope.todos = [{
