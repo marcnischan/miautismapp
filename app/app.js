@@ -32,18 +32,6 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 		           controller: 'ReviewCtrl'
 		       }
 			}
-		}).state('todo', {
-			url: "/todo",
-			views: {
-				"mainView": {
-					templateUrl: "partials/todo.html",
-					controller: 'TodoCtrl'
-				},
-				"reviewsView": {
-	                templateUrl: "partials/reviews.html",
-	                controller: 'reviewsDB'
-				}
-			}
 		}).state('view', {
 			url: "/view",
 			views: {
