@@ -7,30 +7,32 @@ App.factory('locations', ['$http', function($http) {
 
     var service =  {
         getAll: function(callback) {
-            $http.get('/json/locations.json')
-                .success(function(data) {
-                   callback(data);
-                })
-                .error(function(data, status) {
-                    console.error('Error (' + status + '):\n' + data);
-                });
+            if (locations) {
+                callback(locations);
+            } else {
+                $http.get('/json/locations.json')
+                    .success(function(data) {
+                        locations = data;
+                        callback(locations);
+                    })
+                    .error(function(data, status) {
+                        console.error('Error (' + status + '):\n' + data);
+                    });
+            }
         },
         getLocation: function(locationId, callback) {
-            $http.get('/json/locations.json')
-                .success(function(response) {
-                    debugger;
-                    for (var i in response) {
-                        var location = response[i].location;
+            service.getAll(function(locations) {
+                if (locations.length) {
+                    for (var i in locations) {
+                        var location = locations[i].location;
 
                         if (location.id == locationId) {
                             callback(location);
                             break;
                         }
                     }
-                })
-                .error(function(data, status) {
-                    console.error('Error (' + status + '):\n' + data);
-                });
+                }
+            });
         }
     };
 
