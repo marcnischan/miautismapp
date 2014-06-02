@@ -2,7 +2,7 @@ App.controller('LandingCtrl', ['$scope', function($scope) {
 $scope.locations = 
     [                      
         { location: {
-        id: 0000001,
+        id: "MA000001",
         reviewer: {
             firstname: "Renee",
             lastname: "B",
@@ -24,7 +24,7 @@ $scope.locations =
         }
     },
     { location: {
-        id: 0000002,
+        id: "MA000002",
         reviewer: {
             firstname: "Ben",
             lastname: "D",
@@ -46,6 +46,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000003",
         reviewer: {
             firstname: "Ben",
             lastname: "D",
@@ -67,6 +68,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000004",
         reviewer: {
             firstname: "Renee",
             lastname: "B",
@@ -88,6 +90,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000005",
         reviewer: {
             firstname: "Johnny",
             lastname: "B",
@@ -109,6 +112,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000006",
         reviewer: {
             firstname: "Kelsey",
             lastname: "H",
@@ -130,6 +134,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000007",
         reviewer: {
             firstname: "Kelsi",
             lastname: "H",
@@ -151,6 +156,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000008",
         reviewer: {
             firstname: "Kelso",
             lastname: "H",
@@ -172,6 +178,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000009",
         reviewer: {
             firstname: "Kelso",
             lastname: "H",
@@ -193,6 +200,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000010",
         reviewer: {
             firstname: "Kelso",
             lastname: "H",
@@ -214,6 +222,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000011",
         reviewer: {
             firstname: "Kelso",
             lastname: "H",
@@ -235,6 +244,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000012",
         reviewer: {
             firstname: "Kelso",
             lastname: "H",
@@ -256,6 +266,7 @@ $scope.locations =
         }
     },
     { location: {
+        id: "MA000013",
         reviewer: {
             firstname: "Kelso",
             lastname: "H",
