@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.modal']);
+var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.modal', 'google-maps']);
 
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 	function($stateProvider, $locationProvider, $urlRouterProvider) {
@@ -82,17 +82,16 @@ App.controller('LandingCtrl', ['$scope', 'locations', function($scope, locationS
     });
 
 }]);
-App.controller('MapCtrl', ['$scope', function($scope) {
-	$scope.location = "/img/gmap.jpg";
-	
-	$scope.map = {
-        center: {
-            latitude: 45,
-            longitude: -73
-        },
-        zoom: 8
-    };
-	
+App.controller('MapCtrl', ['$scope', function($scope) {  
+	   $scope.location = "/img/gmap.jpg";
+	   $scope.testblurb = "Hello world!";
+	   $scope.map = {
+            center: {
+                latitude: 45,
+                longitude: -73
+            },
+            zoom: 8
+        };
 }]);
 App.controller('ModalCtrl', ['$scope', function($scope) {
 	console.log('modal ctrl');
