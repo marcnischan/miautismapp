@@ -1,10 +1,9 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.modal']).config(['$stateProvider', '$locationProvider', '$urlRouterProvider', function($stateProvider, $locationProvider, $urlRouterProvider) {
-	$locationProvider.hashPrefix('!');
-	$urlRouterProvider.otherwise("/landing");
+var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.modal']);
 
+<<<<<<< HEAD
 	$stateProvider.state('landing', {
 	   url: "/landing",
 	   views: {
@@ -39,21 +38,57 @@ var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.mo
 			"reviewsView": {
                 templateUrl: "partials/reviews.html",
                 controller: 'reviewsDB'
-			}
-		}
-	}).state('view', {
-		url: "/view",
-		views: {
-			"mainView": {
-				templateUrl: "partials/partial.html",
-				controller: 'MyCtrl'
-			}
-		}
-	});
+=======
+App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
+	function($stateProvider, $locationProvider, $urlRouterProvider) {
+		$locationProvider.hashPrefix('!');
+		$urlRouterProvider.otherwise("/landing");
 
+		$stateProvider.state('landing', {
+		   url: "/landing",
+		   views: {
+		       "mapView": {
+		           templateUrl: "partials/landing-map.html",
+		           controller: 'MapCtrl'
+		       },
+		       "mainView": {
+		           templateUrl: "partials/landing.html",
+		           controller: 'LandingCtrl'
+		       }
+		   }
+		}).state('review', {
+			url: "/review/:locationId",
+			views: {
+		       "mapView": {
+		           templateUrl: "partials/review-map.html",
+		           controller: 'ReviewMapCtrl'
+		       },
+		       "mainView": {
+		           templateUrl: "partials/review.html",
+		           controller: 'ReviewCtrl'
+		       }
+>>>>>>> master
+			}
+		}).state('view', {
+			url: "/view",
+			views: {
+				"mainView": {
+					templateUrl: "partials/partial.html",
+					controller: 'MyCtrl'
+				}
+			}
+		});
+
+<<<<<<< HEAD
 	// Without server side support html5 must be disabled.
 	return $locationProvider.html5Mode(false);
 }]);
+=======
+		// Without server side support html5 must be disabled.
+		return $locationProvider.html5Mode(false);
+	}
+]);
+>>>>>>> master
 App.controller('AppCtrl', [
 	'$scope', '$location', '$resource', '$rootScope', function($scope, $location, $resource, $rootScope) {
 		// Uses the url to determine if the selected
@@ -83,6 +118,7 @@ App.controller('AppCtrl', [
 	}
 ]);
 
+<<<<<<< HEAD
 App.controller('LandingCtrl', ['$scope', function($scope) {
 $scope.locations = 
     [                      
@@ -373,6 +409,12 @@ $scope.locations =
         }
     }
     ]
+=======
+App.controller('LandingCtrl', ['$scope', 'locations', function($scope, locationService) {
+    locationService.getAll(function(locations) {
+        $scope.locations = locations;
+    });
+>>>>>>> master
 }]);
 App.controller('MapCtrl', ['$scope', function($scope) {
 	$scope.location = "/img/gmap.jpg";
@@ -384,30 +426,12 @@ App.controller('MyCtrl', ['$scope', function($scope) {
 	$scope.onePlusOne = 2;
 	$scope.greeting = "Hello World";
 }]);
-App.controller('ReviewCtrl', ['$scope', function($scope) {
-$scope.locations = [{
- 
-        location: {
-            reviewer: {
-                firstname: "Renee",
-                lastname: "B",
-                email: "rlboogren@hotmail.com"
-            },
-            business: {
-                category: "Barbershop/hair salon",
-                name: "Great Clips",
-                town: "Clawson",
-                county: "Oakland",
-                rating: {
-                    overall: "4",
-                    sights: "3",
-                    sounds: "5",
-                    friendliness: "4"
-                },
-                comments: "My son is a little nervous when it comes to getting his haircut.  He is very motivated by suckers and the staff at Great Clips are so nice to him and cut his hair quickly and let him pick suckers when he is finished."
-                }
-         }
-      }]
+App.controller('ReviewCtrl', ['$scope', '$stateParams', 'locations', function($scope, $stateParams, locationService) {
+    if ($stateParams.locationId) {
+        locationService.getLocation($stateParams.locationId, function(location) {
+            $scope.location = location;
+        });
+    }
 }]);
 App.controller('ReviewMapCtrl', ['$scope', function($scope) {
 	$scope.map = "/img/gmap.jpg";
@@ -583,6 +607,46 @@ App.filter('interpolate', [
 		};
 	}
 ]);
+'use strict';
+
+/* Location Sevices */
+
+App.factory('locations', ['$http', function($http) {
+    var locations;
+
+    var service =  {
+        getAll: function(callback) {
+            if (locations) {
+                callback(locations);
+            } else {
+                $http.get('/json/locations.json')
+                    .success(function(data) {
+                        locations = data;
+                        callback(locations);
+                    })
+                    .error(function(data, status) {
+                        console.error('Error (' + status + '):\n' + data);
+                    });
+            }
+        },
+        getLocation: function(locationId, callback) {
+            service.getAll(function(locations) {
+                if (locations.length) {
+                    for (var i in locations) {
+                        var location = locations[i].location;
+
+                        if (location.id == locationId) {
+                            callback(location);
+                            break;
+                        }
+                    }
+                }
+            });
+        }
+    };
+
+    return service;
+}]);
 'use strict';
 /* Sevices*/
 

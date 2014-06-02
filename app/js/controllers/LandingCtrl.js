@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 App.controller('LandingCtrl', ['$scope', function($scope) {
 $scope.locations = 
     [                      
@@ -288,4 +289,10 @@ $scope.locations =
         }
     }
     ]
+=======
+App.controller('LandingCtrl', ['$scope', 'locations', function($scope, locationService) {
+    locationService.getAll(function(locations) {
+        $scope.locations = locations;
+    });
+>>>>>>> master
 }]);

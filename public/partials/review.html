@@ -1,12 +1,12 @@
-<div class="locations" ng-repeat="place in locations">
-    <h2>{{place.location.business.name}}</h2>
-    <h3>{{place.location.business.category}}</h3>
-    <p><strong>{{place.location.reviewer.firstname}} {{place.location.reviewer.lastname}}</strong></p>
-    <p>{{place.location.business.comments}}</p>
-    <ul> 
-        <li>Overall {{place.location.business.rating.overall}}</li>
-        <li>Sights {{place.location.business.rating.sights}}</li>
-        <li>Sounds {{place.location.business.rating.sounds}}</li>
-        <li>Friendliness {{place.location.business.rating.friendliness}}</li>
+<div class="locations">
+    <h2>{{business.name}}</h2>
+    <h3>{{business.category}}</h3>
+    <p><strong>{{reviewer.firstname}} {{reviewer.lastname}}</strong></p>
+    <p>{{business.comments}}</p>
+    <ul>
+        <li>Overall {{business.rating.overall}}</li>
+        <li>Sights {{business.rating.sights}}</li>
+        <li>Sounds {{business.rating.sounds}}</li>
+        <li>Friendliness {{business.rating.friendliness}}</li>
     </ul>
 </div>
