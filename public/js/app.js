@@ -84,6 +84,15 @@ App.controller('LandingCtrl', ['$scope', 'locations', function($scope, locationS
 }]);
 App.controller('MapCtrl', ['$scope', function($scope) {
 	$scope.location = "/img/gmap.jpg";
+	
+	$scope.map = {
+        center: {
+            latitude: 45,
+            longitude: -73
+        },
+        zoom: 8
+    };
+	
 }]);
 App.controller('ModalCtrl', ['$scope', function($scope) {
 	console.log('modal ctrl');

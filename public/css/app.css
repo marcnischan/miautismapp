@@ -4620,5 +4620,8 @@ body {
   .locations:nth-child(odd) {
     background-color: #efefef; }
 
+.angular-google-map-container {
+  height: 400px; }
+
 
 /*# sourceMappingURL=app.css.map*/
