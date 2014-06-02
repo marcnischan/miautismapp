@@ -75,10 +75,12 @@ App.controller('AppCtrl', [
 	}
 ]);
 
+
 App.controller('LandingCtrl', ['$scope', 'locations', function($scope, locationService) {
     locationService.getAll(function(locations) {
         $scope.locations = locations;
     });
+
 }]);
 App.controller('MapCtrl', ['$scope', function($scope) {
 	$scope.location = "/img/gmap.jpg";
