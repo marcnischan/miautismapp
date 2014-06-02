@@ -1,8 +1,8 @@
 <div class="search-result cf" ng-repeat="place in locations">
-    <div class="business-type barber">{{place.location.business.category}}</div>
+    <div class="business-type barber">{{place.business.category}}</div>
     <div class="business-listing">
-        <h3>{{place.location.business.name}}</h3>
-        <h4>{{place.location.business.town}}</h4>
-        <h4>Overall {{place.location.business.rating.overall}}</h4>
+        <h3>{{place.business.name}}</h3>
+        <h4>{{place.business.town}}</h4>
+        <h4>Overall {{place.business.rating.overall}}</h4>
     </div>
 </div>
