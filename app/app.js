@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.modal']);
+var App = angular.module('app', ['ngSanitize', 'ngResource', 'ui.router', 'oc.modal', 'google-maps']);
 
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 	function($stateProvider, $locationProvider, $urlRouterProvider) {
