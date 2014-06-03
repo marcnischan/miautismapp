@@ -13,8 +13,9 @@
         
     </head>
     <body>
-        <div ng-include="'/partials/nav.html'"></div>
-
+        <header class="main-header">
+            <div ng-include="'/partials/header.html'"></div>
+        </header>
         <div class="wrapper">
             <div ng-controller="AppCtrl" class="container main-content">
                 <div ui-view="mapView"></div>

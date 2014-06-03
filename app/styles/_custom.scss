@@ -1,5 +1,5 @@
 body {
-    padding: 70px 5px 0;
+    padding: 0 5px 0;
 }
 .donetrue {
     text-decoration: line-through;
@@ -9,6 +9,14 @@ body {
 .carousel, 
 .panel-title a { 
     cursor: pointer; 
+}
+.main-header {
+    text-align: center;
+    
+    .site-logo {
+        width: 53.75%;
+        max-width: 344px;
+    }
 }
 .search-result {
     margin-bottom: 1em;
