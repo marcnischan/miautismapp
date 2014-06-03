@@ -1,12 +1,13 @@
 <div class="locations">
-    <h2>{{business.name}}</h2>
-    <h3>{{business.category}}</h3>
+        <p>{{location.reviewer}}</p>
+    <h2>{{location.business.name}}</h2>
+    <h3>{{location.business.category}}</h3>
     <p><strong>{{reviewer.firstname}} {{reviewer.lastname}}</strong></p>
-    <p>{{business.comments}}</p>
+    <p>{{location.business.comments}}</p>
     <ul>
-        <li>Overall {{business.rating.overall}}</li>
-        <li>Sights {{business.rating.sights}}</li>
-        <li>Sounds {{business.rating.sounds}}</li>
-        <li>Friendliness {{business.rating.friendliness}}</li>
+        <li>Overall {{location.business.rating.overall}}</li>
+        <li>Sights {{location.business.rating.sights}}</li>
+        <li>Sounds {{location.business.rating.sounds}}</li>
+        <li>Friendliness {{location.business.rating.friendliness}}</li>
     </ul>
 </div>

@@ -83,7 +83,9 @@ App.controller('LandingCtrl', ['$scope', 'locations', function($scope, locationS
 
 }]);
 App.controller('MapCtrl', ['$scope', function($scope) {
+	
 	$scope.location = "/img/gmap.jpg";
+	
 }]);
 App.controller('ModalCtrl', ['$scope', function($scope) {
 	console.log('modal ctrl');
@@ -93,12 +95,19 @@ App.controller('MyCtrl', ['$scope', function($scope) {
 	$scope.greeting = "Hello World";
 }]);
 App.controller('ReviewCtrl', ['$scope', '$stateParams', 'locations', function($scope, $stateParams, locationService) {
+    
+//    locationService.getAll(function(locations) {
+//        $scope.locations = locations;
+//    });
+    
     if ($stateParams.locationId) {
         locationService.getLocation($stateParams.locationId, function(location) {
             $scope.location = location;
         });
     }
 }]);
+
+
 App.controller('ReviewMapCtrl', ['$scope', function($scope) {
 	$scope.map = "/img/gmap.jpg";
 	
