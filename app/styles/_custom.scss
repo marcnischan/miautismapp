@@ -1,5 +1,9 @@
 body {
     padding: 0 5px 0;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 200;
+    color: #454741;
+    -webkit-font-smoothing: antialiased;
 }
 .donetrue {
     text-decoration: line-through;
@@ -10,6 +14,8 @@ body {
 .panel-title a { 
     cursor: pointer; 
 }
+/* ----------------------------------------------------global defaults------------------------*/
+
 .main-header {
     text-align: center;
     
@@ -18,20 +24,41 @@ body {
         max-width: 344px;
     }
 }
+.footer {
+    text-align: center;
+}
+/* ----------------------------------------------------styles for landing page------------------- */
+
+.business-type {
+    width: 9.375%; /* 60/640 */
+    float: left;
+}
 .search-result {
     margin-bottom: 1em;
-    
-    .business-type {
-        width: 25%;
-        float: left;
-        background-color: #f6f6f6;
-    }
+    font-size: .9375em;
+    border-bottom: solid 1px #cecccc;
+    padding-bottom: .65em;
+        
     .business-listing {
+        float: left;
         width: 75%;
-        float: right;
-        background-color: #e1e7f0;
+        padding-left: 1em;
+       
+       .address, .overall-rating {
+        display: block;
+        font: normal bold 10px/15px 'Droid Sans', sans-serif;
+       }
+       .address {
+        
+       }
+        .overall-rating {
+                width: 12px;
+        }       
     }
 }
+
+
+/* ----------------------------------------------------styles for review page------------------- */
 .locations {
     padding: 0.5em 2em;
     
@@ -39,6 +66,8 @@ body {
         background-color: #efefef;
     }    
 }
-.angular-google-map-container { height: 400px; }
+.angular-google-map-container { height: 
+    400px; 
+}
  
 
