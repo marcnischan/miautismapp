@@ -1,11 +1,10 @@
 App.controller('MapCtrl', ['$scope', function($scope) {  
-	   $scope.location = "/img/gmap.jpg";
-	   $scope.testblurb = "Hello world!";
+	 
 	   $scope.map = {
             center: {
-                latitude: 45,
-                longitude: -73
+                latitude: 42.335243, 
+                longitude: -83.049640
             },
-            zoom: 8
+            zoom: 12,
         };
 }]);
