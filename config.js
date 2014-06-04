@@ -33,6 +33,9 @@ exports.config = {
 						case 'bower_components/angular-sanitize/angular-sanitize.js':
 						case 'bower_components/angular-ui-router/release/angular-ui-router.js':
 						case 'bower_components/ocModal/ocModal.js':
+						
+						//google-maps
+						case 'bower_components/angular-google-maps/dist/angular-google-maps.min.js':
 
 						// bootstrap
 						case 'bower_components/sass-boostrap3/dist/js/bootstrap.js':
