@@ -61,15 +61,15 @@ body {
 
 
 /* ----------------------------------------------------styles for review page------------------- */
-.locations {
-    padding: 0.5em 2em;
-    
-    &:nth-child(odd) {
-        background-color: #efefef;
-    }    
+.review {
+    .business-listing {
+        /* float: left; */
+        width: 75%;
+        padding-left: 1em;
+    }
 }
-.angular-google-map-container { height: 
-    400px; 
+.angular-google-map-container { 
+    height: 400px; 
 }
  
 

@@ -1,12 +1,21 @@
-<div class="locations">
-    <h2>{{business.name}}</h2>
-    <h3>{{business.category}}</h3>
-    <p><strong>{{reviewer.firstname}} {{reviewer.lastname}}</strong></p>
-    <p>{{business.comments}}</p>
-    <ul>
-        <li>Overall {{business.rating.overall}}</li>
-        <li>Sights {{business.rating.sights}}</li>
-        <li>Sounds {{business.rating.sounds}}</li>
-        <li>Friendliness {{business.rating.friendliness}}</li>
-    </ul>
-</div>
+<div class="review">
+    <div class="business-type">
+        <object type="image/svg+xml" data="/img/{{logotype}}.svg"></object>
+    </div>
+    <div class="business-listing">
+        <h3><a ng-href=#!/review/{{business.id}}>{{business.name}}</a></h3>
+        <span class="address">{{business.town}}</span>
+    </div>
+    <div class="business-ratings">
+        <ul>
+            <li>Overall {{business.rating.overall}}</li>
+            <li>Sights {{business.rating.sights}}</li>
+            <li>Sounds {{business.rating.sounds}}</li>
+            <li>Friendliness {{business.rating.friendliness}}</li>
+        </ul>
+    </div>
+    <div class="comments">
+        <p>{{business.comments}}</p>
+    </div>
+    
+    </div>
