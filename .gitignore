@@ -64,7 +64,7 @@ build.xml
 #############
 ## Project
 #############
-#public
+public
 node_modules/*
 npm-debug.log
 docs
