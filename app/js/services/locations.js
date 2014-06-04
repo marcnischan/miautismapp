@@ -24,7 +24,7 @@ App.factory('locations', ['$http', function($http) {
             service.getAll(function(locations) {
                 if (locations.length) {
                     for (var i in locations) {
-                        var location = locations[i].location;
+                        var location = locations[i];
 
                         if (location.id == locationId) {
                             callback(location);
