@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="review">
     <div class="business-type">
         <object type="image/svg+xml" data="/img/{{logotype}}.svg"></object>
@@ -19,3 +20,18 @@
     </div>
     
     </div>
+=======
+<div class="locations">
+        <p>{{location.reviewer}}</p>
+    <h2>{{location.business.name}}</h2>
+    <h3>{{location.business.category}}</h3>
+    <p><strong>{{reviewer.firstname}} {{reviewer.lastname}}</strong></p>
+    <p>{{location.business.comments}}</p>
+    <ul>
+        <li>Overall {{location.business.rating.overall}}</li>
+        <li>Sights {{location.business.rating.sights}}</li>
+        <li>Sounds {{location.business.rating.sounds}}</li>
+        <li>Friendliness {{location.business.rating.friendliness}}</li>
+    </ul>
+</div>
+>>>>>>> fix-review-display
