@@ -3,8 +3,10 @@
 
 $default-font: 'Droid Sans', sans-serif;
 $default-font-size: .9375em;
+$default-hover: #428bca;
 $mia-green: #9dc533;
 $text-color: #454741;
+$border-grey: #cecccc;
 
 body {
     padding: 0 5px 0;
@@ -22,23 +24,72 @@ body {
 .panel-title a { 
     cursor: pointer; 
 }
+
 /* ----------------------------------------------------global defaults------------------------*/
 
 .main-header {
     text-align: center;
     
+    .header-content {
+        border-bottom: solid 1px $border-grey;
+        margin-bottom: 1em;
+    }
     .site-logo {
         width: 53.75%;
         max-width: 344px;
     }
 }
-.footer {
-    text-align: center;
+
+
+.footer-content {
+    
+    .footer {
+        background-color: #f6f6f6;
+        border-top: solid 1px $border-grey;
+        border-bottom: solid 1px $border-grey;
+        padding: 0.75em 1em;
+    }
+    .aaom-logo {
+        width: 100%;
+    }
+    .aaom-logo-link {
+        display: block;
+        width: 15%;
+        max-width: 42px;
+        float: left;
+        line-height: .25em;
+    }
+    .footer-nav {
+        line-height: 4em;
+        text-align: center;
+        font-size: .8em;
+        color: $mia-green;
+        text-decoration: none;
+        
+        a:link, a:visited {
+            color: $mia-green;
+        }
+        a:hover, a:active {
+            color: $default-hover;
+        }
+    }
+    .footer-blurb {
+        float: left;
+        width: 85%;
+        font: normal 200 .75em/1.25em $default-font;
+        color: #86887f;
+        padding: .5em 0 0 1em;
+    }
 }
 .overall-rating {
     width: 12px;
 }
+.angular-google-map-container { 
+    height: 200px; 
+}
+
 /* ----------------------------------------------------styles for landing page------------------- */
+
 .map-view {
     margin-bottom: 1em;
 }
@@ -51,7 +102,11 @@ body {
     font-size: $default-font-size;
     border-bottom: solid 1px #cecccc;
     padding-bottom: .65em;
-        
+    
+    &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
     .business-listing {
         float: left;
         width: 75%;
@@ -110,8 +165,12 @@ body {
 .comments {
     font: normal 200 0.9375em/18px $default-font;
 }
-.angular-google-map-container { 
-    height: 200px; 
-}
- 
 
+
+
+ 
+@media screen and (max-width: 400px){
+    body {
+        padding: 0;
+    }
+}
