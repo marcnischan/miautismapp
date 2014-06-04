@@ -1,8 +1,16 @@
+
+/* sass variables */
+
+$default-font: 'Droid Sans', sans-serif;
+$default-font-size: .9375em;
+$mia-green: #9dc533;
+$text-color: #454741;
+
 body {
     padding: 0 5px 0;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 200;
-    color: #454741;
+    color: $text-color;
     -webkit-font-smoothing: antialiased;
 }
 .donetrue {
@@ -27,6 +35,9 @@ body {
 .footer {
     text-align: center;
 }
+.overall-rating {
+    width: 12px;
+}
 /* ----------------------------------------------------styles for landing page------------------- */
 .map-view {
     margin-bottom: 1em;
@@ -37,7 +48,7 @@ body {
 }
 .search-result {
     margin-bottom: 1em;
-    font-size: .9375em;
+    font-size: $default-font-size;
     border-bottom: solid 1px #cecccc;
     padding-bottom: .65em;
         
@@ -45,16 +56,13 @@ body {
         float: left;
         width: 75%;
         padding-left: 1em;
-       
-       .address, .overall-rating {
-        display: block;
-        font: normal bold 10px/15px 'Droid Sans', sans-serif;
-       }
-       .address {
         
-       }
-        .overall-rating {
-                width: 12px;
+        .address, .overall-rating {
+        display: block;
+        font: normal bold 10px/15px $default-font;
+        }
+        .address {
+        
         }       
     }
 }
@@ -62,13 +70,48 @@ body {
 
 /* ----------------------------------------------------styles for review page------------------- */
 .review {
+    margin-bottom: 1em;
+    
+    .small-header {
+        padding: 1em 0;
+        -webkit-font-smoothing: subpixel-antialiased;
+        font: normal 200 0.6875em/1em $default-font;
+        text-transform: uppercase;
+        color: $mia-green;
+    }
+    
     .business-listing {
         /* float: left; */
         width: 75%;
+        font-size: $default-font-size;
+        padding-bottom: 1em;
+    }
+    .business-type, .business-listing, .overall-rating {
+        float: left;
     }
 }
+.business-name {
+    font: normal 200 1.125em/1em $default-font;
+}
+.address {
+    font: normal bold 0.8125em/1em $default-font;
+}
+.business-ratings, .comments {
+    border-top: solid 1px $mia-green;
+    padding-bottom: 1em;
+}
+.business-ratings {
+    font: normal 200 0.9375em/1.5em $default-font;
+    
+    strong {
+        font-weight: 700;
+    }
+}
+.comments {
+    font: normal 200 0.9375em/18px $default-font;
+}
 .angular-google-map-container { 
-    height: 400px; 
+    height: 200px; 
 }
  
 

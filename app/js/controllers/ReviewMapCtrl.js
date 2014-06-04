@@ -6,6 +6,8 @@ App.controller('ReviewMapCtrl', ['$scope', function($scope) {
             longitude: -83.049640
         },
         zoom: 16,
+        zoomControl: false,
+        scaleControl: false
     };	
 	
 }]);

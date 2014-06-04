@@ -1,20 +1,27 @@
 <div class="review">
-    <div class="business-type">
-        <object type="image/svg+xml" data="/img/{{logotype}}.svg"></object>
-    </div>
-    <div class="business-listing">
-        <h3><a ng-href=#!/review/{{business.id}}>{{business.name}}</a></h3>
-        <span class="address">{{business.town}}</span>
+    <div class="review-header cf">
+        <div class="business-type">
+            <object type="image/svg+xml" data="/img/{{logotype}}.svg"></object>
+        </div>
+        <div class="business-listing">
+            <h3 class="business-name">{{business.name}}</h3>
+            <span class="address">{{business.town}}, MI</span>
+        </div>
+        <div class="overall-rating">
+            <object type="image/svg+xml" data="/img/star.svg"></object>
+        </div>
     </div>
     <div class="business-ratings">
+        <h4 class="small-header">Ratings</h4>
         <ul>
-            <li>Overall {{business.rating.overall}}</li>
-            <li>Sights {{business.rating.sights}}</li>
-            <li>Sounds {{business.rating.sounds}}</li>
-            <li>Friendliness {{business.rating.friendliness}}</li>
+            <li>Overall <strong>{{business.rating.overall}}</strong></li>
+            <li>Sights <strong>{{business.rating.sights}}</strong></li>
+            <li>Sounds <strong>{{business.rating.sounds}}</strong></li>
+            <li>Friendliness <strong>{{business.rating.friendliness}}</strong></li>
         </ul>
     </div>
     <div class="comments">
+        <h4 class="small-header">Reviews</h4>
         <p>{{business.comments}}</p>
     </div>
     
