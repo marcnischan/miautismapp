@@ -30,17 +30,35 @@ body {
 .main-header {
     text-align: center;
     
-    .header-content {
+    .header-view {
         border-bottom: solid 1px $border-grey;
         margin-bottom: 1em;
+        position: relative;
+        display: table;
+        width: 100%;
     }
     .site-logo {
-        width: 53.75%;
+        width: 80%;
         max-width: 344px;
     }
+    .site-logo-no-nav {
+        width: 53.75%;
+    }
+    .back-button {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        width: 18%;
+    }
+    .back-arrow {
+        vertical-align: middle;
+        margin-left: 1em;
+    }
+    .placeholder {
+        display: table-cell;
+        width: 18%;
+    }
 }
-
-
 .footer-content {
     
     .footer {
@@ -81,9 +99,11 @@ body {
         padding: .5em 0 0 1em;
     }
 }
+/*
 .overall-rating {
     width: 12px;
 }
+*/
 .angular-google-map-container { 
     height: 200px; 
 }
@@ -92,6 +112,32 @@ body {
 
 .map-view {
     margin-bottom: 1em;
+    padding: 0 1em;
+}
+.main-dropdown {
+    background-color: $mia-green;
+    min-height: 60px;
+    margin-bottom: 1em;
+    padding: 1em 1em 0;
+    position: relative;
+    
+    .title {
+        text-transform: uppercase;
+        font: normal bold 0.5625em/1em $default-font;
+        margin-bottom: .25em;
+    }
+    .county {
+        font: normal bold 1.125em/1.125em $default-font;
+        color: #fff;
+        letter-spacing: -0.025em;
+    }
+    .dropdown-arrow {
+        float: right;
+        width: 23px;
+        position: absolute;
+        right: 1em;
+        top: 1.5em;
+    }
 }
 .business-type {
     width: 9.375%; /* 60/640 */
@@ -101,7 +147,7 @@ body {
     margin-bottom: 1em;
     font-size: $default-font-size;
     border-bottom: solid 1px #cecccc;
-    padding-bottom: .65em;
+    padding: 0 1em .65em;
     
     &:last-child {
         margin-bottom: 0;
@@ -110,11 +156,11 @@ body {
     .business-listing {
         float: left;
         width: 75%;
-        padding-left: 1em;
+        padding: 0 0 1em .65em;
         
         .address, .overall-rating {
-        display: block;
-        font: normal bold 10px/15px $default-font;
+            display: block;
+            font: normal bold 10px/15px $default-font;
         }
         .address {
         
@@ -126,7 +172,7 @@ body {
 /* ----------------------------------------------------styles for review page------------------- */
 .review {
     margin-bottom: 1em;
-    
+    padding: 0 1em;
     .small-header {
         padding: 1em 0;
         -webkit-font-smoothing: subpixel-antialiased;
@@ -134,15 +180,35 @@ body {
         text-transform: uppercase;
         color: $mia-green;
     }
-    
+    .overall-rating {
+        width: 35%;
+        
+        .star {
+            display: inline-block;
+            float: right;
+            width: 12px;
+            margin-left: 4px;
+            margin-right: 0;
+        }
+    }
     .business-listing {
         /* float: left; */
-        width: 75%;
+        width: 65%;
         font-size: $default-font-size;
         padding-bottom: 1em;
     }
     .business-type, .business-listing, .overall-rating {
         float: left;
+    }
+}
+.overall-rating {
+    width: 35%;
+    
+    .star {
+        display: inline-block;
+        float: left;
+        width: 12px;
+        margin-right: 4px;
     }
 }
 .business-name {
@@ -163,7 +229,7 @@ body {
     }
 }
 .comments {
-    font: normal 200 0.9375em/18px $default-font;
+    font: normal 200 0.8em/18px $default-font;
 }
 
 
@@ -171,6 +237,9 @@ body {
  
 @media screen and (max-width: 400px){
     body {
+        padding: 0;
+    }
+    .container {
         padding: 0;
     }
 }

@@ -1,13 +1,22 @@
+<div class="main-dropdown">
+    <h1 class="title">Recommendations in</h1>
+    <div class="county">Oakland County</div>
+    <img class="dropdown-arrow" src="/img/dropdown-arrow.png" />
+</div>
 <div class="search-result cf" ng-repeat="place in locations">
     <div class="business-type">
-        <object type="image/svg+xml" data="/img/{{logotype}}.svg"></object>
+        <img ng-src=/img/{{place.business.logotype}}.svg />
     </div>
     <div class="business-listing">
         <h3><a ng-href=#!/review/{{place.id}}>{{place.business.name}}</a></h3>
         <span class="address">{{place.business.town}}</span>
-        <span class="overall-rating">
-            <object type="image/svg+xml" data="/img/star.svg"></object>
-        </span>
+        <div class="overall-rating">
+            <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
+            <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
+            <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
+            <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
+        </div>
     </div>
+    
 </div>
 

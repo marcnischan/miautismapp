@@ -11,6 +11,10 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 		$stateProvider.state('landing', {
 		   url: "/landing",
 		   views: {
+		       "headerView" : {
+		       templateUrl: "partials/header.html",
+		       controller: 'HeaderCtrl'
+		       },
 		       "mapView": {
 		           templateUrl: "partials/landing-map.html",
 		           controller: 'MapCtrl'
@@ -23,6 +27,10 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 		}).state('review', {
 			url: "/review/:locationId",
 			views: {
+               "headerView" : {
+		       templateUrl:'partials/review-header.html',
+		       controller: 'ReviewHeaderCtrl'
+		       },
 		       "mapView": {
 		           templateUrl: "partials/review-map.html",
 		           controller: 'ReviewMapCtrl'
@@ -31,14 +39,6 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 		           templateUrl: "partials/review.html",
 		           controller: 'ReviewCtrl'
 		       }
-			}
-		}).state('view', {
-			url: "/view",
-			views: {
-				"mainView": {
-					templateUrl: "partials/partial.html",
-					controller: 'MyCtrl'
-				}
 			}
 		});
 
@@ -76,6 +76,11 @@ App.controller('AppCtrl', [
 ]);
 
 
+App.controller('HeaderCtrl', ['$scope', function($scope) {
+   
+
+}]);
+
 App.controller('LandingCtrl', ['$scope', 'locations', function($scope, locationService) {
     locationService.getAll(function(locations) {
         $scope.locations = locations;
@@ -92,13 +97,6 @@ App.controller('MapCtrl', ['$scope', function($scope) {
             zoom: 12,
         };
 }]);
-App.controller('ModalCtrl', ['$scope', function($scope) {
-	console.log('modal ctrl');
-}]);
-App.controller('MyCtrl', ['$scope', function($scope) {
-	$scope.onePlusOne = 2;
-	$scope.greeting = "Hello World";
-}]);
 App.controller('ReviewCtrl', ['$scope', '$stateParams', 'locations', function($scope, $stateParams, locationService) {
     if ($stateParams.locationId) {
         locationService.getLocation($stateParams.locationId, function(location) {
@@ -110,6 +108,11 @@ App.controller('ReviewCtrl', ['$scope', '$stateParams', 'locations', function($s
 }]);
 
 
+
+App.controller('ReviewHeaderCtrl', ['$scope', function($scope) {
+   
+
+}]);
 App.controller('ReviewMapCtrl', ['$scope', function($scope) {
 
     $scope.map = {
@@ -122,40 +125,6 @@ App.controller('ReviewMapCtrl', ['$scope', function($scope) {
         scaleControl: false
     };	
 	
-}]);
-App.controller('TodoCtrl', ['$scope', function($scope) {
-	$scope.todos = [{
-		text: "learn angular",
-		done: true
-	}, {
-		text: "build an angular app",
-		done: false
-	}];
-	$scope.addTodo = function() {
-		$scope.todos.push({
-			text: $scope.todoText,
-			done: false
-		});
-		return $scope.todoText = "";
-	};
-	$scope.remaining = function() {
-		var count;
-		count = 0;
-		angular.forEach($scope.todos, function(todo) {
-			return count += (todo.done ? 0 : 1);
-		});
-		return count;
-	};
-	return $scope.archive = function() {
-		var oldTodos;
-		oldTodos = $scope.todos;
-		$scope.todos = [];
-		return angular.forEach(oldTodos, function(todo) {
-			if(!todo.done) {
-				return $scope.todos.push(todo);
-			}
-		});
-	};
 }]);
 'use strict';
 /* Directives*/
