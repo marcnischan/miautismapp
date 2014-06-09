@@ -13,8 +13,8 @@
         
     </head>
     <body>
-        <header class="main-header">
-            <div class="header-content" ng-include="'/partials/header.html'"></div>
+        <header ng-controller="AppCtrl" class="main-header">
+            <div class="header-view" ui-view="headerView"></div>
         </header>
         <div class="wrapper">
             <div ng-controller="AppCtrl" class="container main-content">

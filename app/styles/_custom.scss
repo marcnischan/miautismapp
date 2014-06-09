@@ -30,13 +30,33 @@ body {
 .main-header {
     text-align: center;
     
-    .header-content {
+    .header-view {
         border-bottom: solid 1px $border-grey;
         margin-bottom: 1em;
+        position: relative;
+        display: table;
+        width: 100%;
     }
     .site-logo {
-        width: 53.75%;
+        width: 80%;
         max-width: 344px;
+    }
+    .site-logo-no-nav {
+        width: 53.75%;
+    }
+    .back-button {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        width: 18%;
+    }
+    .back-arrow {
+        vertical-align: middle;
+        margin-left: 1em;
+    }
+    .placeholder {
+        display: table-cell;
+        width: 18%;
     }
 }
 .footer-content {

@@ -11,6 +11,10 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 		$stateProvider.state('landing', {
 		   url: "/landing",
 		   views: {
+		       "headerView" : {
+		       templateUrl: "partials/header.html",
+		       controller: 'HeaderCtrl'
+		       },
 		       "mapView": {
 		           templateUrl: "partials/landing-map.html",
 		           controller: 'MapCtrl'
@@ -23,6 +27,10 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 		}).state('review', {
 			url: "/review/:locationId",
 			views: {
+               "headerView" : {
+		       templateUrl:'partials/review-header.html',
+		       controller: 'ReviewHeaderCtrl'
+		       },
 		       "mapView": {
 		           templateUrl: "partials/review-map.html",
 		           controller: 'ReviewMapCtrl'
@@ -31,14 +39,6 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 		           templateUrl: "partials/review.html",
 		           controller: 'ReviewCtrl'
 		       }
-			}
-		}).state('view', {
-			url: "/view",
-			views: {
-				"mainView": {
-					templateUrl: "partials/partial.html",
-					controller: 'MyCtrl'
-				}
 			}
 		});
 
