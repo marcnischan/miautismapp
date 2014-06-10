@@ -82,9 +82,11 @@ App.controller('HeaderCtrl', ['$scope', function($scope) {
 }]);
 
 App.controller('LandingCtrl', ['$scope', 'locations', function($scope, locationService) {
+    
     locationService.getAll(function(locations) {
         $scope.locations = locations;
     });
+    $scope.searchterm = "Oakland";
 
 }]);
 App.controller('MapCtrl', ['$scope', function($scope) {  
