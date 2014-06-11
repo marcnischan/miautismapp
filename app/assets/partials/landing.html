@@ -1,19 +1,20 @@
-<div class="main-dropdown">
-    <h1 class="title">Recommendations in</h1>
+            <div class="dropdown">
+    <a href="#!" class="main-dropdown " data-toggle="dropdown">
+        <h1 class="title">Recommendations in</h1>
         <div class="selected-county">{{searchterm}} County</div>
-        <ul class="county">
-            <li class="search-term" ng-click="searchterm='Genesee'">Genessee</li>
-            <li class="search-term" ng-click="searchterm='Lapeer'">Lapeer</li>
-            <li class="search-term" ng-click="searchterm='Lenawee'">Lenawee</li>
-            <li class="search-term" ng-click="searchterm='Macomb'">Macomb</li>
-            <li class="search-term" ng-click="searchterm='Oakland'">Oakland</li>
-            <li class="search-term" ng-click="searchterm='Saint Clair'">Saint Clair</li>
-            <li class="search-term" ng-click="searchterm='Washtenaw'">Washtenaw</li>
-            <li class="search-term" ng-click="searchterm='Wayne'">Wayne</li>
-        </ul>
-    <img class="dropdown-arrow" src="/img/dropdown-arrow.png" />
+        <img class="dropdown-arrow" src="/img/dropdown-arrow.png" />
+    </a>
+    <ul class="dropdown-menu county" role="menu" aria-labelledby="dLabel">
+        <li class="search-term" ng-click="searchterm='Genesee'">Genessee</li>
+        <li class="search-term" ng-click="searchterm='Lapeer'">Lapeer</li>
+        <li class="search-term" ng-click="searchterm='Lenawee'">Lenawee</li>
+        <li class="search-term" ng-click="searchterm='Macomb'">Macomb</li>
+        <li class="search-term" ng-click="searchterm='Oakland'">Oakland</li>
+        <li class="search-term" ng-click="searchterm='Saint Clair'">Saint Clair</li>
+        <li class="search-term" ng-click="searchterm='Washtenaw'">Washtenaw</li>
+        <li class="search-term" ng-click="searchterm='Wayne'">Wayne</li>
+    </ul>
 </div>
-
 <div class="search-result cf" ng-repeat="place in locations | filter:searchterm:county ">
     <div class="business-type">
         <img ng-src=/img/{{place.business.logotype}}.svg />
@@ -28,6 +29,6 @@
             <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
         </div>
     </div>
-    
 </div>
+
 
