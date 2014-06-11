@@ -116,7 +116,6 @@ body {
 .main-dropdown {
     background-color: $mia-green;
     min-height: 60px;
-    margin-bottom: 1em;
     padding: 1em 0 0;
     position: relative;
     display: block;
@@ -130,6 +129,11 @@ body {
         font: normal bold 0.5625em/1em $default-font;
         margin-bottom: .25em;
         padding-left: 6.15em;
+        color: $text-color;
+        
+        &:link, &:visited, &:hover, &:active, &:focus {
+            color: $text-color;
+        }
         
     }
     .selected-county {
@@ -148,7 +152,7 @@ body {
 }
 .dropdown-menu.county {
     margin: 0;
-    padding: 1em 0;
+    padding: 0 0 1em;
     border: none;
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -178,7 +182,7 @@ body {
     margin-bottom: 1em;
     font-size: $default-font-size;
     border-bottom: solid 1px #cecccc;
-    padding: 0 1em .65em;
+    padding: 1em 1em .65em;
 
     
     &:last-child {
