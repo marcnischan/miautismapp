@@ -32,7 +32,6 @@ body {
     
     .header-view {
         border-bottom: solid 1px $border-grey;
-        margin-bottom: 1em;
         position: relative;
         display: table;
         width: 100%;
@@ -83,7 +82,8 @@ body {
         font-size: .8em;
         color: $mia-green;
         text-decoration: none;
-        
+        border-bottom: solid 1px $border-grey;
+
         a:link, a:visited {
             color: $mia-green;
         }
@@ -111,8 +111,7 @@ body {
 /* ----------------------------------------------------styles for landing page------------------- */
 
 .map-view {
-    margin-bottom: 1em;
-    padding: 0 1em;
+
 }
 .main-dropdown {
     background-color: $mia-green;
@@ -120,6 +119,11 @@ body {
     margin-bottom: 1em;
     padding: 1em 0 0;
     position: relative;
+    display: block;
+    
+    &:link, &:hover, &:active, &:focus {
+        text-decoration: none;  
+    }
     
     .title {
         text-transform: uppercase;
@@ -128,15 +132,32 @@ body {
         padding-left: 6.15em;
         
     }
-    .county {
-        padding: 1em 0;
-    }
     .selected-county {
         font: normal bold 1.125em/1.125em $default-font;
         color: #fff;
         letter-spacing: -0.025em;
         padding-left: 3em;
     }
+    .dropdown-arrow {
+        float: right;
+        width: 23px;
+        position: absolute;
+        right: 1em;
+        top: 1.5em;
+    }
+}
+.dropdown-menu.county {
+    margin: 0;
+    padding: 1em 0;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    font-size: inherit;
+    border-radius: 0;
+    background-color: $mia-green;
+    width: 100%;
+}
+.dropdown-menu {
     .search-term {
         padding: 0.75em 0 0.75em 3.5em;
         cursor: pointer;
@@ -147,13 +168,6 @@ body {
             background-color: #d5e6a7;
             font-weight: bold;
         }
-    }
-    .dropdown-arrow {
-        float: right;
-        width: 23px;
-        position: absolute;
-        right: 1em;
-        top: 1.5em;
     }
 }
 .business-type {
@@ -190,7 +204,9 @@ body {
 /* ----------------------------------------------------styles for review page------------------- */
 .review {
     margin-bottom: 1em;
-    padding: 0 1em;
+    padding: 1em 1em 0;
+    border-top: solid 5px $mia-green;
+    
     .small-header {
         padding: 1em 0;
         -webkit-font-smoothing: subpixel-antialiased;

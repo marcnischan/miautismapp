@@ -21,7 +21,7 @@ exports.config = {
 						case 'bower_components/modernizr/modernizr.js':
 
 						// jquery
-						case 'bower_components/jquery/dist/jquery.js':
+						case 'bower_components/jquery/dist/jquery.min.js':
 
 						// lodash
 						case 'bower_components/lodash/dist/lodash.js':
