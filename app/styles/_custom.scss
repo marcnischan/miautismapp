@@ -19,21 +19,20 @@ body {
 .donetrue {
     text-decoration: line-through;
 }
-.nav, 
-.pagination, 
-.carousel, 
-.panel-title a { 
-    cursor: pointer; 
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
 }
 
 /* ----------------------------------------------------global defaults------------------------*/
 
 .main-header {
     text-align: center;
-    
+
     .header-view {
         border-bottom: solid 1px $border-grey;
-        margin-bottom: 1em;
         position: relative;
         display: table;
         width: 100%;
@@ -61,7 +60,7 @@ body {
     }
 }
 .footer-content {
-    
+
     .footer {
         background-color: #f6f6f6;
         border-top: solid 1px $border-grey;
@@ -84,7 +83,8 @@ body {
         font-size: .8em;
         color: $mia-green;
         text-decoration: none;
-        
+        border-bottom: solid 1px $border-grey;
+
         a:link, a:visited {
             color: $mia-green;
         }
@@ -105,32 +105,43 @@ body {
     width: 12px;
 }
 */
-.angular-google-map-container { 
-    height: 200px; 
+.angular-google-map-container {
+    height: 200px;
 }
 
 /* ----------------------------------------------------styles for landing page------------------- */
 
 .map-view {
-    margin-bottom: 1em;
-    padding: 0 1em;
+
 }
 .main-dropdown {
     background-color: $mia-green;
     min-height: 60px;
-    margin-bottom: 1em;
-    padding: 1em 1em 0;
+    padding: 1em 0 0;
     position: relative;
-    
+    display: block;
+
+    &:link, &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+
     .title {
         text-transform: uppercase;
         font: normal bold 0.5625em/1em $default-font;
         margin-bottom: .25em;
+        padding-left: 6.15em;
+        color: $text-color;
+
+        &:link, &:visited, &:hover, &:active, &:focus {
+            color: $text-color;
+        }
+
     }
-    .county {
+    .selected-county {
         font: normal bold 1.125em/1.125em $default-font;
         color: #fff;
         letter-spacing: -0.025em;
+        padding-left: 3em;
     }
     .dropdown-arrow {
         float: right;
@@ -138,6 +149,30 @@ body {
         position: absolute;
         right: 1em;
         top: 1.5em;
+    }
+}
+.dropdown-menu.county {
+    margin: 0;
+    padding: 0 0 1em;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    font-size: inherit;
+    border-radius: 0;
+    background-color: $mia-green;
+    width: 100%;
+}
+.dropdown-menu {
+    .search-term {
+        padding: 0.75em 0 0.75em 3.5em;
+        cursor: pointer;
+        color: #fff;
+
+        &:hover, &:active {
+            color: $text-color;
+            background-color: #d5e6a7;
+            font-weight: bold;
+        }
     }
 }
 .business-type {
@@ -148,8 +183,9 @@ body {
     margin-bottom: 1em;
     font-size: $default-font-size;
     border-bottom: solid 1px #cecccc;
-    padding: 0 1em .65em;
-    
+    padding: 1em 1em .65em;
+
+
     &:last-child {
         margin-bottom: 0;
         border-bottom: none;
@@ -158,14 +194,14 @@ body {
         float: left;
         width: 75%;
         padding: 0 0 1em .65em;
-        
+
         .address, .overall-rating {
             display: block;
             font: normal bold 10px/15px $default-font;
         }
         .address {
-        
-        }       
+
+        }
     }
 }
 
@@ -173,7 +209,9 @@ body {
 /* ----------------------------------------------------styles for review page------------------- */
 .review {
     margin-bottom: 1em;
-    padding: 0 1em;
+    padding: 1em 1em 0;
+    border-top: solid 5px $mia-green;
+
     .small-header {
         padding: 1em 0;
         -webkit-font-smoothing: subpixel-antialiased;
@@ -183,7 +221,7 @@ body {
     }
     .overall-rating {
         width: 35%;
-        
+
         .star {
             display: inline-block;
             float: right;
@@ -204,7 +242,7 @@ body {
 }
 .overall-rating {
     width: 35%;
-    
+
     .star {
         display: inline-block;
         float: left;
@@ -224,7 +262,7 @@ body {
 }
 .business-ratings {
     font: normal 200 0.9375em/1.5em $default-font;
-    
+
     strong {
         font-weight: 700;
     }
@@ -260,8 +298,7 @@ body {
 }
 
 
- 
- 
+
 @media screen and (max-width: 400px){
     body {
         padding: 0;

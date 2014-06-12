@@ -21,7 +21,7 @@ exports.config = {
 						case 'bower_components/modernizr/modernizr.js':
 
 						// jquery
-						case 'bower_components/jquery/dist/jquery.js':
+						case 'bower_components/jquery/dist/jquery.min.js':
 
 						// lodash
 						case 'bower_components/lodash/dist/lodash.js':
@@ -33,13 +33,17 @@ exports.config = {
 						case 'bower_components/angular-sanitize/angular-sanitize.js':
 						case 'bower_components/angular-ui-router/release/angular-ui-router.js':
 						case 'bower_components/ocModal/ocModal.js':
-						
+
+						// underscrore
+						case 'bower_components/underscore/underscore.js':
+
 						//google-maps
 						case 'bower_components/angular-google-maps/dist/angular-google-maps.min.js':
 
 						// bootstrap
-						case 'bower_components/sass-boostrap3/dist/js/bootstrap.js':
+						case 'bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js':
 							return true;
+
 						default:
 							return false;
 					}
@@ -55,10 +59,10 @@ exports.config = {
 					'bower_components/jquery/jquery.js',
 
 					// angular
-					'bower_components/angular/angular.js',
-
-					// bootstrap
-					'bower_components/bootstrap/dist/js/bootstrap.js'
+					'bower_components/angular/angular.js'
+				],
+				after: [
+					'bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js'
 				]
 			}
 		},
