@@ -22,7 +22,7 @@ App.controller('ReviewCtrl', ['$scope', '$stateParams', 'locations', function($s
                 
             for( var i = 0; i < rating; i++ ){
                     $('.star').eq(i).addClass('show-star');
-                }                
+            }                
         });
     }
 }]);
