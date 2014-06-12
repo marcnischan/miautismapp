@@ -34,6 +34,10 @@
             "name": "Olga's",
             "town": "Auburn Hills",
             "county": "Oakland",
+            "coords": {
+                "latitude": 42.679731,
+                "longitude": -83.220544
+            },
             "rating": {
                 "overall": "4",
                 "sights": "3",

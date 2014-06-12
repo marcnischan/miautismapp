@@ -27,18 +27,13 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 		}).state('review', {
 			url: "/review/:locationId",
 			views: {
-               "headerView" : {
-		       templateUrl:'partials/review-header.html',
-		       controller: 'ReviewHeaderCtrl'
-		       },
-		       "mapView": {
-		           templateUrl: "partials/review-map.html",
-		           controller: 'ReviewMapCtrl'
-		       },
-		       "mainView": {
-		           templateUrl: "partials/review.html",
-		           controller: 'ReviewCtrl'
-		       }
+				"headerView" : {
+					templateUrl:'partials/review-header.html'
+				},
+				"mainView": {
+					templateUrl: "partials/review.html",
+					controller: 'ReviewCtrl'
+				}
 			}
 		});
 
@@ -102,33 +97,27 @@ App.controller('MapCtrl', ['$scope', function($scope) {
 }]);
 App.controller('ReviewCtrl', ['$scope', '$stateParams', 'locations', function($scope, $stateParams, locationService) {
     if ($stateParams.locationId) {
+        $scope.map = {
+            center: {
+                latitude: 0,
+                longitude: 0
+            }
+        };
+
         locationService.getLocation($stateParams.locationId, function(location) {
-            $scope.business = location.business;
+            var business = location.business;
+
+            $scope.business = business;
             $scope.reviewer = location.reviewer;
 
+            if (business.coords) {
+                $scope.map.center = business.coords;
+            }
         });
     }
 }]);
 
 
-
-App.controller('ReviewHeaderCtrl', ['$scope', function($scope) {
-   
-
-}]);
-App.controller('ReviewMapCtrl', ['$scope', function($scope) {
-
-    $scope.map = {
-        center: {
-            latitude: 42.335243, 
-            longitude: -83.049640
-        },
-        zoom: 16,
-        zoomControl: false,
-        scaleControl: false
-    };	
-	
-}]);
 'use strict';
 /* Directives*/
 

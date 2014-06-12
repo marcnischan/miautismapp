@@ -1,12 +1,18 @@
+<google-map center="map.center" zoom="16">
+    <marker coords="map.center"></marker>
+</google-map>
+
 <div class="review">
     <div class="review-header cf">
         <div class="business-type">
             <object type="image/svg+xml" data="/img/{{logotype}}.svg"></object>
         </div>
+
         <div class="business-listing">
             <h3 class="business-name">{{business.name}}</h3>
             <span class="address">{{business.town}}, MI</span>
         </div>
+
         <div class="overall-rating">
             <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
             <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
@@ -14,6 +20,7 @@
             <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
         </div>
     </div>
+
     <div class="business-ratings">
         <h4 class="small-header">Ratings</h4>
         <ul>
@@ -23,9 +30,9 @@
             <li>Friendliness <strong>{{business.rating.friendliness}}</strong></li>
         </ul>
     </div>
+
     <div class="comments">
         <h4 class="small-header">Reviews</h4>
         <p>{{business.comments}}</p>
     </div>
-    
-    </div>
+</div>

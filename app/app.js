@@ -27,18 +27,13 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 		}).state('review', {
 			url: "/review/:locationId",
 			views: {
-               "headerView" : {
-		       templateUrl:'partials/review-header.html',
-		       controller: 'ReviewHeaderCtrl'
-		       },
-		       "mapView": {
-		           templateUrl: "partials/review-map.html",
-		           controller: 'ReviewMapCtrl'
-		       },
-		       "mainView": {
-		           templateUrl: "partials/review.html",
-		           controller: 'ReviewCtrl'
-		       }
+				"headerView" : {
+					templateUrl:'partials/review-header.html'
+				},
+				"mainView": {
+					templateUrl: "partials/review.html",
+					controller: 'ReviewCtrl'
+				}
 			}
 		});
 
