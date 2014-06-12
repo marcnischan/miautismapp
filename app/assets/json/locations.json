@@ -195,8 +195,8 @@
             "town": "Flat Rock",
             "county": "Wayne",
             "coords": {
-                "latitude": 42.4766746,
-                "longitude": -83.3843824 
+                "latitude": 42.0955595,
+                "longitude": -83.2727564
             },
             "rating": {
                 "overall": "5",
@@ -221,8 +221,8 @@
             "town": "Commerce Township",
             "county": "Oakland",
             "coords": {
-                "latitude": 42.4766746,
-                "longitude": -83.3843824 
+                "latitude": 42.598204,
+                "longitude": -83.447087 
             },
             "rating": {
                 "overall": "5",
