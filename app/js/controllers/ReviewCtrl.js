@@ -17,21 +17,12 @@ App.controller('ReviewCtrl', ['$scope', '$stateParams', 'locations', function($s
                 $scope.map.center = business.coords;
             };
             
-            $scope.rating = business.rating.overall;
-            var rating = $scope.rating;
-            
-            var addStar = function(rating){
+            var rating = business.rating.overall;
                 rating = parseInt(rating);
                 
-                for( var i = 0; i < rating; i++ ){
+            for( var i = 0; i < rating; i++ ){
                     $('.star').eq(i).addClass('show-star');
                 }                
-            };
-            
-            addStar(rating);
-            
-
-            
         });
     }
 }]);
