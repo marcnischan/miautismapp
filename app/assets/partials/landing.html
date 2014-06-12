@@ -1,9 +1,9 @@
-<google-map center="map.center" zoom="map.zoom" control="map.control">
-    <markers models="map.markers" coords="'self'"></markers>
+<google-map center="map.center" zoom="map.zoom" control="map.control" pan="map.pan" options="map.options">
+    <markers models="map.markers" coords="'self'" fit="true"></markers>
 </google-map>
 
 <div class="dropdown">
-    <a href="#!" class="main-dropdown " data-toggle="dropdown">
+    <a href="#!" class="main-dropdown" data-toggle="dropdown">
         <h1 class="title">Recommendations in</h1>
         <div class="selected-county">{{searchterm}} County</div>
         <img class="dropdown-arrow" src="/img/dropdown-arrow.png" />
