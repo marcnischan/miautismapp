@@ -170,7 +170,7 @@
             "county": "Oakland",
             "coords": {
                 "latitude": 42.4766746,
-                "longitude": -83.3843824 
+                "longitude": -83.3843824
             },
             "rating": {
                 "overall": "5",
@@ -222,7 +222,7 @@
             "county": "Oakland",
             "coords": {
                 "latitude": 42.598204,
-                "longitude": -83.447087 
+                "longitude": -83.447087
             },
             "rating": {
                 "overall": "5",
@@ -247,8 +247,8 @@
             "town": "Flint",
             "county": "Genesee",
             "coords": {
-                "latitude": 42.679731,
-                "longitude": -83.220544
+                "latitude": 43.012989,
+                "longitude": -83.68846
             },
             "rating": {
                 "overall": "4",
@@ -273,8 +273,8 @@
             "town": "Lapeer",
             "county": "Lapeer",
             "coords": {
-                "latitude": 42.679731,
-                "longitude": -83.220544
+                "latitude": 43.041179,
+                "longitude": -83.325374
             },
             "rating": {
                 "overall": "2",
@@ -300,8 +300,8 @@
             "town": "Adrian",
             "county": "Lenawee",
             "coords": {
-                "latitude": 42.679731,
-                "longitude": -83.220544
+                "latitude": 41.892135,
+                "longitude": -84.0470632
             },
             "rating": {
                 "overall": "4",
@@ -346,14 +346,14 @@
             "email": "kelsey.hilbers@detroitlabs.com"
         },
         "business": {
-            "category": "Place of recreation",
-            "logotype": "recreation",
-            "name": "Four Bears Water Park",
-            "town": "Shelby Township",
+            "category": "Restaurant",
+            "logotype": "restaurant",
+            "name": "Pink Elephant Cupcakes",
+            "town": "St. Clair Shores",
             "county": "Macomb",
             "coords": {
-                "latitude": 42.679731,
-                "longitude": -83.220544
+                "latitude": 42.460956,
+                "longitude": -82.882591
             },
             "rating": {
                 "overall": "3",
@@ -361,7 +361,7 @@
                 "sounds": "3",
                 "friendliness": "3"
                 },
-            "comments": "A nice park when its not too busy and staff isn’t overwhelmed. "
+            "comments": "This has to be the best frosting I've tasted."
         }
     },
     {
@@ -404,8 +404,8 @@
             "town": "Ann Arbor",
             "county": "Washtenaw",
             "coords": {
-                "latitude": 42.679731,
-                "longitude": -83.220544
+                "latitude": 42.283659,
+                "longitude": -83.746563
             },
             "rating": {
                 "overall": "4",

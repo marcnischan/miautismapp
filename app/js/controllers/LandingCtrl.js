@@ -19,8 +19,14 @@ App.controller('LandingCtrl', ['$scope', 'locations', 'geolocation', function($s
         control: {},
         // see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
         options: {
-            visible: false,
-            disableDefaultUI: true
+            disableDefaultUI: true,
+            mapTypeControl: false,
+            overviewMapControl: false,
+            panControl: false,
+            scaleControl: false,
+            streetViewControl: false,
+            zoomControl: true,
+            maxZoom: 15
         },
         events: {},
         userMarkerOptions: {
