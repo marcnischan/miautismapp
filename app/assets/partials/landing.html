@@ -16,11 +16,12 @@
     </ul>
 </div>
 <div class="search-result cf" ng-repeat="place in locations | filter:searchterm:county ">
+    <a ng-href=#!/review/{{place.id}}>
     <div class="business-type">
         <img ng-src=/img/{{place.business.logotype}}.svg />
     </div>
     <div class="business-listing">
-        <h3><a ng-href=#!/review/{{place.id}}>{{place.business.name}}</a></h3>
+        <h3>{{place.business.name}}</h3>
         <span class="address">{{place.business.town}}</span>
         <div class="overall-rating">
             <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
@@ -29,6 +30,7 @@
             <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
         </div>
     </div>
+    </a>
 </div>
 
 

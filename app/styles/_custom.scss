@@ -30,7 +30,11 @@ body {
 
 .main-header {
     text-align: center;
-
+    
+    .logo-link {
+        display: table-cell;
+        vertical-align: middle;
+    }
     .header-view {
         border-bottom: solid 1px $border-grey;
         position: relative;
@@ -40,9 +44,11 @@ body {
     .site-logo {
         width: 80%;
         max-width: 344px;
+        vertical-align: middle;
     }
     .site-logo-no-nav {
         width: 53.75%;
+        vertical-align: middle;
     }
     .back-button {
         display: table-cell;
