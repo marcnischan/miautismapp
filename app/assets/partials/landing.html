@@ -1,5 +1,10 @@
-            <div class="dropdown">
-    <a href="#!" class="main-dropdown " data-toggle="dropdown">
+<google-map center="map.center" zoom="map.zoom" control="map.control" pan="map.pan" options="map.options" events="map.events">
+    <marker coords="user.coords" options="map.userMarkerOptions"></marker>
+    <markers models="map.markers" coords="'self'" fit="true"></markers>
+</google-map>
+
+<div class="dropdown">
+    <a href="#!" class="main-dropdown" data-toggle="dropdown">
         <h1 class="title">Recommendations in</h1>
         <div class="selected-county">{{searchterm}} County</div>
         <img class="dropdown-arrow" src="/img/dropdown-arrow.png" />
@@ -15,6 +20,7 @@
         <li class="search-term" ng-click="searchterm='Wayne'">Wayne</li>
     </ul>
 </div>
+
 <div class="search-result cf" ng-repeat="place in locations | filter:searchterm:county ">
     <a ng-href=#!/review/{{place.id}}>
     <div class="business-type">
