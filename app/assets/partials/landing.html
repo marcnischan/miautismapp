@@ -1,4 +1,8 @@
-            <div class="dropdown">
+<google-map center="map.center" zoom="map.zoom" control="map.control">
+    <markers models="map.markers" coords="'self'"></markers>
+</google-map>
+
+<div class="dropdown">
     <a href="#!" class="main-dropdown " data-toggle="dropdown">
         <h1 class="title">Recommendations in</h1>
         <div class="selected-county">{{searchterm}} County</div>
@@ -15,6 +19,7 @@
         <li class="search-term" ng-click="searchterm='Wayne'">Wayne</li>
     </ul>
 </div>
+
 <div class="search-result cf" ng-repeat="place in locations | filter:searchterm:county ">
     <div class="business-type">
         <img ng-src=/img/{{place.business.logotype}}.svg />

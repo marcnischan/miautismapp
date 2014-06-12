@@ -259,6 +259,10 @@
             "name": "Farmer’s Market",
             "town": "Ann Arbor",
             "county": "Washtenaw",
+            "coords": {
+                "latitude": 42.283659,
+                "longitude": -83.746563
+            },
             "rating": {
                 "overall": "4",
                 "sights": "4",

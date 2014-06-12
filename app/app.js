@@ -9,21 +9,16 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 		$urlRouterProvider.otherwise("/landing");
 
 		$stateProvider.state('landing', {
-		   url: "/landing",
-		   views: {
-		       "headerView" : {
-		       templateUrl: "partials/header.html",
-		       controller: 'HeaderCtrl'
-		       },
-		       "mapView": {
-		           templateUrl: "partials/landing-map.html",
-		           controller: 'MapCtrl'
-		       },
-		       "mainView": {
-		           templateUrl: "partials/landing.html",
-		           controller: 'LandingCtrl'
-		       }
-		   }
+			url: "/landing",
+			views: {
+				"headerView" : {
+					templateUrl: "partials/header.html",
+				},
+				"mainView": {
+					templateUrl: "partials/landing.html",
+					controller: 'LandingCtrl'
+				}
+			}
 		}).state('review', {
 			url: "/review/:locationId",
 			views: {
