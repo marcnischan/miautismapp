@@ -29,10 +29,11 @@ App.controller('LandingCtrl', ['$scope', 'locations', 'geolocation', function($s
             maxZoom: 15
         },
         events: {},
+        markers: [],
+        markerOptions: {},
         userMarkerOptions: {
             icon: 'https://www.google.com/support/enterprise/static/geo/cdate/art/icons/user_marker_32.png'
         },
-        markers: []
     };
 
     $scope.searchterm = 'Oakland';
