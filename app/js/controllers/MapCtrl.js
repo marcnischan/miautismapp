@@ -1,10 +1,16 @@
-App.controller('MapCtrl', ['$scope', function($scope) {  
-	 
-	   $scope.map = {
-            center: {
-                latitude: 42.335243, 
-                longitude: -83.049640
-            },
-            zoom: 12,
-        };
+App.controller('MapCtrl', ['$scope', function($scope) {
+    $scope.map = {
+        center: {
+            latitude: 0,
+            longitude: 0
+        },
+        zoom: 12,
+        control: {}
+    };
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+        $scope.map.control.refresh(position.coords);
+    }, function(error) {
+        console.log(error);
+    });
 }]);
