@@ -41,7 +41,7 @@ exports.config = {
 						case 'bower_components/angular-google-maps/dist/angular-google-maps.min.js':
 
 						// bootstrap
-						case 'bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap.js':
+						case 'bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js':
 							return true;
 
 						default:
@@ -62,7 +62,7 @@ exports.config = {
 					'bower_components/angular/angular.js'
 				],
 				after: [
-					'bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap.js'
+					'bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js'
 				]
 			}
 		},
