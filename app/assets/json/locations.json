@@ -234,32 +234,6 @@
         }
     },
     {
-        "id": 999,
-        "reviewer": {
-            "firstname": "Test",
-            "lastname": "Test",
-            "email": "test@test.com"
-        },
-        "business": {
-            "category": "Restaurant",
-            "logotype": "restaurant",
-            "name": "Restaurant",
-            "town": "Restaurantville",
-            "county": "Oakland",
-            "coords": {
-                "latitude": 0,
-                "longitude": 0
-            },
-            "rating": {
-                "overall": "9",
-                "sights": "9",
-                "sounds": "9",
-                "friendliness": "9"
-                },
-            "comments": "This was a very nice place. This was a very nice place. This was a very nice place. This was a very nice place. This was a very nice place."
-        }
-    },
-    {
         "id": 998,
         "reviewer": {
             "firstname": "Kelsey",
