@@ -274,7 +274,11 @@ body {
 /* ----------------------------------------------- about page -------------*/
  
 .about {
-    padding: 1em;
+    padding: 0 0 1em;
+    
+    .wrapper {
+        padding: 0 1em;
+    }
     
     h1, h3 {
         font-family: $default-font;
@@ -287,6 +291,15 @@ body {
     }
     .h3 {
         font-size: 1.25em;
+        background-color: $mia-green;
+        padding: 30px;
+        color: #fff;
+        font-size: 22px;
+        margin-top: 0;
+        
+        a:link, a:visited, a:hover {
+            
+        }
     }
     .h4 {
         font-size: .85em;
@@ -294,6 +307,12 @@ body {
         font-weight: 700;
         letter-spacing: 0.035em; 
         margin: 2em 0 1em;
+    }
+    .compass {
+        width: 12.5%;
+        margin: auto;
+        display: block;
+        padding: 2em 0;
     }
 }
 
