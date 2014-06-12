@@ -3,8 +3,11 @@ App.controller('LandingCtrl', ['$scope', 'locations', 'geolocation', function($s
     /* Scope Vars */
 
     $scope.user = {
-        coords: null,
-        county: null
+        county: null,
+        coords: {
+            latitude: 0,
+            longitude: 0
+        }
     };
 
     $scope.map = {
@@ -14,36 +17,20 @@ App.controller('LandingCtrl', ['$scope', 'locations', 'geolocation', function($s
         },
         zoom: 17,
         control: {},
-        markers: [],
-
         // see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
         options: {
+            visible: false,
             disableDefaultUI: true
-        }
+        },
+        events: {},
+        userMarkerOptions: {
+            icon: 'https://www.google.com/support/enterprise/static/geo/cdate/art/icons/user_marker_32.png'
+        },
+        markers: []
     };
 
     $scope.searchterm = 'Oakland';
 
-
-    /* Local Functions */
-
-    var getUserLocation = function(success) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            success(position.coords);
-        }, function(error) {
-            console.log(error);
-        });
-    };
-
-    var addUserMarker = function(coords) {
-        if ($scope.user.coords) {
-            $scope.map.markers.push({
-                id: $scope.map.markers.length + 1,
-                longitude: $scope.user.coords.longitude,
-                latitude: $scope.user.coords.latitude
-            });
-        }
-    };
 
     /* Observers */
 
@@ -70,12 +57,7 @@ App.controller('LandingCtrl', ['$scope', 'locations', 'geolocation', function($s
                 });
             }
 
-            // if we have a user marker (@ position [0]), then preserve it...
-            // otherwise, empty the array.
-            $scope.map.markers = ($scope.user.coords) ? $scope.map.markers.slice(0, 1) : [];
-
-            // append new markers
-            $scope.map.markers = $scope.map.markers.concat(newMarkers);
+            $scope.map.markers = newMarkers;
 
             $scope.map.control.refresh();
         }
@@ -84,21 +66,22 @@ App.controller('LandingCtrl', ['$scope', 'locations', 'geolocation', function($s
 
     /* Controller Logic */
 
-    getUserLocation(function(coords) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        var coords = position.coords;
+
         $scope.user.coords = coords;
         $scope.map.control.refresh(coords);
-
-        addUserMarker();
 
         geo.getCountyFromLatLng(coords.latitude, coords.longitude, function(county) {
             if (county) {
                 $scope.user.county = county;
             }
         });
+    }, function(error) {
+        console.log(error);
     });
 
     locationService.getAll(function(locations) {
         $scope.locations = locations;
     });
-
 }]);

@@ -30,6 +30,18 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
 					controller: 'ReviewCtrl'
 				}
 			}
+		})
+		.state('about', {
+			url: "/about",
+			views: {
+               "headerView" : {
+		       templateUrl:'partials/review-header.html',
+		       controller: 'ReviewHeaderCtrl'
+		       },
+		       "mainView": {
+		           templateUrl: "partials/about.html"
+		       }
+			}
 		});
 
 		// Without server side support html5 must be disabled.

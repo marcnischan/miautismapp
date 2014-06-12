@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 3,
         "reviewer": {
             "firstname": "Renee",
             "lastname": "B",
@@ -12,6 +12,10 @@
             "name": "Great Clips",
             "town": "Clawson",
             "county": "Oakland",
+            "coords": {
+                "latitude": 42.53344,
+                "longitude": -83.164589
+            },
             "rating": {
                 "overall": "4",
                 "sights": "3",
@@ -22,7 +26,7 @@
         }
     },
     {
-        "id": 2,
+        "id": 4,
         "reviewer": {
             "firstname": "Ben",
             "lastname": "D",
@@ -48,7 +52,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 5,
         "reviewer": {
             "firstname": "Ben",
             "lastname": "D",
@@ -60,6 +64,10 @@
             "name": "Outdoor World Bass Pro Shop",
             "town": "Auburn Hills",
             "county": "Oakland",
+            "coords": {
+                "latitude": 42.703183,
+                "longitude": -83.298438
+            },
             "rating": {
                 "overall": "4",
                 "sights": "3",
@@ -70,51 +78,163 @@
         }
     },
     {
-        "id": 4,
+        "id": 6,
         "reviewer": {
-            "firstname": "Renee",
-            "lastname": "B",
-            "email": "rlboogren@hotmail.com"
+            "firstname": "Jen",
+            "lastname": "L",
+            "email": "jglovy@comcast.net"
         },
         "business": {
             "category": "Barbershop/hair salon",
             "logotype": "barber",
-            "name": "Great Clips",
-            "town": "Clawson",
+            "name": "House of Style",
+            "town": "West Bloomfield",
             "county": "Oakland",
+            "coords": {
+                "latitude": 42.551198,
+                "longitude": -83.217747
+            },
             "rating": {
-                "overall": "4",
+                "overall": "5",
                 "sights": "3",
-                "sounds": "5",
-                "friendliness": "4"
+                "sounds": "4",
+                "friendliness": "1"
                 },
-            "comments": "I can't believe it's not Butter!! Such cuts! Most enjoyment barber!"
+            "comments": "Barry has been cutting my sons hair for eight years and he is great with him. He has a lot of experience with children on the spectrum and special needs in general.  When the salon is busy it may be loud (but no more than any other salon)."
         }
     },
     {
-        "id": 5,
+        "id": 7,
         "reviewer": {
-            "firstname": "Johnny",
-            "lastname": "B",
-            "email": "dsvsdsdren@hotmail.com"
+            "firstname": "Jessica",
+            "lastname": "C",
+            "email": "jessicacogar@gmail.com"
         },
         "business": {
-            "category": "Buddhist temple",
-            "logotype": "recreation",
-            "name": "Rama lama ding dong",
-            "town": "North Pole",
-            "county": "Funkytown",
+            "category": "Barbershop/hair salon",
+            "logotype": "barber",
+            "name": "Cookie Cutters",
+            "town": "Canton",
+            "county": "Wayne",
+            "coords": {
+                "latitude": 42.308387,
+                "longitude": -83.476883
+            },
             "rating": {
                 "overall": "4",
-                "sights": "3",
-                "sounds": "5",
+                "sights": "4",
+                "sounds": "1",
                 "friendliness": "4"
                 },
-            "comments": "OMG the lolz!! Internet is the best! Such pixel expressions!"
+            "comments": "I always schedule an appointment to reduce our wait time, but they accept walk-ins as well. They have toys and a slide to occupy the kids if there is a wait. The chairs are shaped like cars and planes, and I believe some have a strap. There are TVs at each station and those provide a good distraction. They work super fast there since they specialize in kids' cuts."
         }
     },
     {
-        "id": 6,
+        "id": 8,
+        "reviewer": {
+            "firstname": "Jill",
+            "lastname": "Pernicano",
+            "email": "rabbitbloom@yahoo.com"
+        },
+        "business": {
+            "category": "Place of recreation",
+            "logotype": "recreation",
+            "name": "Quest Martial Arts",
+            "town": "Ann Arbor",
+            "county": "Washtenaw",
+            "coords": {
+                "latitude": 42.256616,
+                "longitude": -83.7263
+            },
+            "rating": {
+                "overall": "5",
+                "sights": "3",
+                "sounds": "4",
+                "friendliness": "1"
+                },
+            "comments": "The man I spoke with at Quest Martial Arts recommended the quietest class times and arranged for us to come a half hour before class to get us oriented. We met with him in a private room, and he reviewed exactly what would happen in class, and went over some of the moves with my child. He was calm, reassuring and very good natured. Then my child joined the class and it was a great success. I highly recommend Quest Martial Arts!"
+        }
+    },
+    {
+        "id": 9,
+        "reviewer": {
+            "firstname": "Jen",
+            "lastname": "L",
+            "email": "jglovy@comcast.net"
+        },
+        "business": {
+            "category": "Place of recreation",
+            "logotype": "recreation",
+            "name": "Heritage Park",
+            "town": "Farmington Hills",
+            "county": "Oakland",
+            "coords": {
+                "latitude": 42.4766746,
+                "longitude": -83.3843824 
+            },
+            "rating": {
+                "overall": "5",
+                "sights": "2",
+                "sounds": "3",
+                "friendliness": "2"
+                },
+            "comments": "Heritage Park has a nice playground with a splash pad (no admission fee).  If crowds are a problem, it's best to go early during the week."
+        }
+    },
+    {
+        "id": 10,
+        "reviewer": {
+            "firstname": "Jessica",
+            "lastname": "C",
+            "email": "jessicacogar@gmail.com"
+        },
+        "business": {
+            "category": "Restaurant",
+            "logotype": "restaurant",
+            "name": "Simpler Times Downtown General Store",
+            "town": "Flat Rock",
+            "county": "Wayne",
+            "coords": {
+                "latitude": 42.0955595,
+                "longitude": -83.2727564
+            },
+            "rating": {
+                "overall": "5",
+                "sights": "3",
+                "sounds": "1",
+                "friendliness": "5"
+                },
+            "comments": "They are a coffee shop, ice cream parlor, and grocery store all in one. They have a nice selection of gluten free foods. We have tried their GF oatmeal and baking mix, and both were good. A lot of what they sell is Michigan made."
+        }
+    },
+    {
+        "id": 11,
+        "reviewer": {
+            "firstname": "Ron",
+            "lastname": "H",
+            "email": "hodess@millercanfield.com"
+        },
+        "business": {
+            "category": "Barbershop/hair salon",
+            "logotype": "barber",
+            "name": "Fantastic Sams",
+            "town": "Commerce Township",
+            "county": "Oakland",
+            "coords": {
+                "latitude": 42.598204,
+                "longitude": -83.447087 
+            },
+            "rating": {
+                "overall": "5",
+                "sights": "4",
+                "sounds": "4",
+                "friendliness": "1"
+                },
+            "comments": "Tommy (owner) and Maria and the rest of the stylists have been very accommodating to our family and really understand how to deal with sensory issues with our kids. Thanks Tommy!"
+        }
+    },
+    {
+        "id": 998,
         "reviewer": {
             "firstname": "Kelsey",
             "lastname": "H",
@@ -126,6 +246,10 @@
             "name": "Halo Burger",
             "town": "Flint",
             "county": "Genesee",
+            "coords": {
+                "latitude": 42.679731,
+                "longitude": -83.220544
+            },
             "rating": {
                 "overall": "4",
                 "sights": "3",
@@ -136,7 +260,7 @@
         }
     },
     {
-        "id": 7,
+        "id": 997,
         "reviewer": {
             "firstname": "Kelsi",
             "lastname": "H",
@@ -148,6 +272,10 @@
             "name": "Blind Fish",
             "town": "Lapeer",
             "county": "Lapeer",
+            "coords": {
+                "latitude": 42.679731,
+                "longitude": -83.220544
+            },
             "rating": {
                 "overall": "2",
                 "sights": "5",
@@ -159,7 +287,7 @@
     },
     {
 
-        "id": 8,
+        "id": 996,
         "reviewer": {
             "firstname": "Kelso",
             "lastname": "H",
@@ -171,6 +299,10 @@
             "name": "Riverside Park",
             "town": "Adrian",
             "county": "Lenawee",
+            "coords": {
+                "latitude": 42.679731,
+                "longitude": -83.220544
+            },
             "rating": {
                 "overall": "4",
                 "sights": "2",
@@ -181,7 +313,7 @@
         }
     },
     {
-        "id": 9,
+        "id": 995 ,
         "reviewer": {
             "firstname": "Kelso",
             "lastname": "H",
@@ -193,6 +325,10 @@
             "name": "Family Impact Center",
             "town": "Fowlerville",
             "county": "Livingston",
+            "coords": {
+                "latitude": 42.679731,
+                "longitude": -83.220544
+            },
             "rating": {
                 "overall": "4",
                 "sights": "2",
@@ -203,7 +339,7 @@
         }
     },
     {
-        "id": 10,
+        "id": 994 ,
         "reviewer": {
             "firstname": "Kelso",
             "lastname": "H",
@@ -215,6 +351,10 @@
             "name": "Four Bears Water Park",
             "town": "Shelby Township",
             "county": "Macomb",
+            "coords": {
+                "latitude": 42.679731,
+                "longitude": -83.220544
+            },
             "rating": {
                 "overall": "3",
                 "sights": "2",
@@ -225,7 +365,7 @@
         }
     },
     {
-        "id": 11,
+        "id": 993,
         "reviewer": {
             "firstname": "Kelso",
             "lastname": "H",
@@ -237,6 +377,10 @@
             "name": "European Touch",
             "town": "Saint Clair",
             "county": "Saint Clair",
+            "coords": {
+                "latitude": 42.679731,
+                "longitude": -83.220544
+            },
             "rating": {
                 "overall": "2",
                 "sights": "2",
@@ -247,7 +391,7 @@
         }
     },
     {
-        "id": 12,
+        "id": 992,
         "reviewer": {
             "firstname": "Kelso",
             "lastname": "H",
@@ -260,8 +404,8 @@
             "town": "Ann Arbor",
             "county": "Washtenaw",
             "coords": {
-                "latitude": 42.283659,
-                "longitude": -83.746563
+                "latitude": 42.679731,
+                "longitude": -83.220544
             },
             "rating": {
                 "overall": "4",
@@ -273,7 +417,7 @@
         }
     },
     {
-        "id": 13,
+        "id": 991,
         "reviewer": {
             "firstname": "Kelso",
             "lastname": "H",
@@ -285,6 +429,10 @@
             "name": "The Rink at Campus Martius",
             "town": "Detroit",
             "county": "Wayne",
+            "coords": {
+                "latitude": 42.679731,
+                "longitude": -83.220544
+            },
             "rating": {
                 "overall": "3",
                 "sights": "2",
