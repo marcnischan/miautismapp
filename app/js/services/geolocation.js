@@ -3,7 +3,7 @@
 /* GeoLocation Sevices */
 
 App.factory('geolocation', ['$http', function($http) {
-    var apiKey = 'AIzaSyD7p3HQ5XJ_qVeYCfWO8ytt72ioJCMLP6Q';
+    var apiKey = 'AIzaSyDNdc9IE2_zuL7rgK2PVyQn0MMVzAc1dJQ';
 
     var service =  {
         getCountyFromLatLng: function(latitude, longitude, callback) {
