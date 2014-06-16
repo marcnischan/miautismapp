@@ -111,10 +111,17 @@ star-rating {
     width: 35%;
 
     .star {
-        display: none;
         float: left;
         width: 12px;
         margin-right: 4px;
+    }
+}
+#star-path {
+    stroke: $mia-green;
+    fill: white;
+
+    &.filled {
+        fill: $mia-green;
     }
 }
 .angular-google-map-container {

@@ -2,7 +2,6 @@
 
 /* Star Rating Directive */
 
-// register the module with Angular
 App.directive('starRating', [function() {
     return {
         restrict: 'E',
@@ -12,12 +11,15 @@ App.directive('starRating', [function() {
         templateUrl: 'partials/star-rating.html',
         link: function(scope, element, attrs) {
             scope.$watch('score', function(score) {
-                if (scope.score) {
+                if (score) {
                     var stars = element.children();
 
                     for (var i in stars) {
-                        if (i < scope.score) {
-                            $(stars[i]).css({ display: 'inline-block' });
+                        if (i < score) {
+                            $(stars[i]).bind('load', function() {
+                                var starPath = this.contentDocument.getElementById('star-path');
+                                starPath.setAttribute('class', 'filled')
+                            });
                         }
                     }
                 }
