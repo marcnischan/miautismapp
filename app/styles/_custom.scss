@@ -30,7 +30,7 @@ body {
 
 .main-header {
     text-align: center;
-    
+
     .logo-link {
         display: table-cell;
         vertical-align: middle;
@@ -106,11 +106,17 @@ body {
         padding: .5em 0 0 1em;
     }
 }
-/*
-.overall-rating {
-    width: 12px;
+star-rating {
+    display: inline-block;
+    width: 35%;
+
+    .star {
+        display: none;
+        float: left;
+        width: 12px;
+        margin-right: 4px;
+    }
 }
-*/
 .angular-google-map-container {
     height: 200px;
 }
@@ -201,12 +207,9 @@ body {
         width: 75%;
         padding: 0 0 1em .65em;
 
-        .address, .overall-rating {
+        .address {
             display: block;
             font: normal bold 10px/15px $default-font;
-        }
-        .address {
-
         }
     }
 }
@@ -225,38 +228,14 @@ body {
         text-transform: uppercase;
         color: $mia-green;
     }
-    .overall-rating {
-        width: 35%;
-
-        .star {
-            float: right;
-            width: 12px;
-            margin-left: 4px;
-            margin-right: 0;
-            
-        }
-    }
     .business-listing {
         /* float: left; */
         width: 65%;
         font-size: $default-font-size;
         padding-bottom: 1em;
     }
-    .business-type, .business-listing, .overall-rating {
+    .business-type, .business-listing {
         float: left;
-    }
-}
-.overall-rating {
-    width: 35%;
-
-    .star {
-        float: left;
-        width: 12px;
-        margin-right: 4px;
-        display: none;
-    }
-    .show-star {
-        display: inline-block;
     }
 }
 .business-name {
@@ -281,14 +260,14 @@ body {
 }
 
 /* ----------------------------------------------- about page -------------*/
- 
+
 .about {
     padding: 0 0 1em;
-    
+
     .wrapper {
         padding: 0 1em;
     }
-    
+
     h1, h3 {
         font-family: $default-font;
     }
@@ -305,16 +284,16 @@ body {
         color: #fff;
         font-size: 22px;
         margin-top: 0;
-        
+
         a:link, a:visited, a:hover {
-            
+
         }
     }
     .h4 {
         font-size: .85em;
         text-transform: uppercase;
         font-weight: 700;
-        letter-spacing: 0.035em; 
+        letter-spacing: 0.035em;
         margin: 2em 0 1em;
     }
     .compass {

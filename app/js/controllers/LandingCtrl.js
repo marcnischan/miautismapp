@@ -90,13 +90,5 @@ App.controller('LandingCtrl', ['$scope', 'locations', 'geolocation', function($s
 
     locationService.getAll(function(locations) {
         $scope.locations = locations;
-    });
-    
-    var rating = business.rating.overall;
-        rating = parseInt(rating);
-        
-    for( var i = 0; i < rating; i++ ){
-            $('.star').eq(i).addClass('show-star');
-    }
-    
+    });    
 }]);
