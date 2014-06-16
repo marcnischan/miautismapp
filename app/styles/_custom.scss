@@ -30,7 +30,6 @@ body {
 
 .main-header {
     text-align: center;
-
     .logo-link {
         display: table-cell;
         vertical-align: middle;
@@ -82,6 +81,12 @@ body {
         max-width: 42px;
         float: left;
         line-height: .25em;
+    }
+    .facebook {
+        float: right;
+        display: block;
+        width: 30px;
+        height: 30px;
     }
     .footer-nav {
         line-height: 4em;
