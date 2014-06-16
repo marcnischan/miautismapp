@@ -83,6 +83,12 @@ body {
         float: left;
         line-height: .25em;
     }
+    .facebook {
+        float: right;
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
     .footer-nav {
         line-height: 4em;
         text-align: center;
@@ -106,11 +112,6 @@ body {
         padding: .5em 0 0 1em;
     }
 }
-/*
-.overall-rating {
-    width: 12px;
-}
-*/
 .angular-google-map-container {
     height: 200px;
 }
