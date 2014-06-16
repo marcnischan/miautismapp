@@ -29,6 +29,7 @@
     "uglify-js-brunch": "~1.7.7",
     "auto-reload-brunch": "~1.7.3",
     "brunch": "~1.7.13",
+    "sass-brunch": "~1.7.1",
     "express": "~4.1.1",
     "karma-junit-reporter": "~0.2.2",
     "karma-firefox-launcher": "~0.1.3",
