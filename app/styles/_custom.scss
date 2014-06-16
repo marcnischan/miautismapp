@@ -229,11 +229,11 @@ body {
         width: 35%;
 
         .star {
-            display: inline-block;
             float: right;
             width: 12px;
             margin-left: 4px;
             margin-right: 0;
+            
         }
     }
     .business-listing {
@@ -250,10 +250,13 @@ body {
     width: 35%;
 
     .star {
-        display: inline-block;
         float: left;
         width: 12px;
         margin-right: 4px;
+        display: none;
+    }
+    .show-star {
+        display: inline-block;
     }
 }
 .business-name {
