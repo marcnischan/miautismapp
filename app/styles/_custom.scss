@@ -71,7 +71,7 @@ body {
         width: 18%;
         
         img {
-            width: 65px;
+            width: 50px;
         }
     }
     .back-arrow {
@@ -86,8 +86,8 @@ body {
 }
 .footer-content {
     .footer-wrapper {
-        max-width: 570px;
-        margin: auto;
+        max-width: 580px;
+        margin: 0 auto 5px;
     }
     .footer {
         background-color: #f6f6f6;
@@ -104,12 +104,14 @@ body {
         max-width: 42px;
         float: left;
         line-height: .25em;
+        margin-right: 1em;
     }
     .facebook {
         float: right;
         display: block;
         width: 30px;
         height: 30px;
+        padding-top: 9px;
     }
     .footer-nav {
         line-height: 4em;
@@ -130,13 +132,18 @@ body {
         width: 85%;
         font: normal 200 .75em/1.25em $default-font;
         color: #86887f;
-        padding: .5em 0 0 1em;
+        padding: .5em 0 0 0;
+        
+        p {
+            padding-top: 4px;
+        }
     }
 }
 star-rating {
     display: inline-block;
     width: 85px;
     float: right;
+    padding-top: 3px;
     
     .star {
         float: left;
@@ -230,7 +237,11 @@ star-rating {
     border-bottom: solid 1px #cecccc;
     padding: 1em 1em .65em;
     min-height: 79px;
-
+    
+    h3{
+        line-height: 1.25em;
+    }
+    
     &:last-child {
         margin-bottom: 0;
         border-bottom: none;
@@ -254,7 +265,10 @@ star-rating {
     margin-bottom: 1em;
     padding: 1em 1em 0;
     border-top: solid 5px $mia-green;
-
+    
+    star-rating {
+        padding-top: 0;
+    }
     .small-header {
         padding: 1em 0;
         -webkit-font-smoothing: subpixel-antialiased;
@@ -331,7 +345,7 @@ star-rating {
 @media screen and (min-width: 525px){
     .footer-content {
         .footer-blurb {
-            line-height: 2.25em;
+            line-height: 2.5em;
         }
     }
 }
@@ -349,10 +363,13 @@ star-rating {
     .miautism-logo { 
         width: 176px;
         margin: auto;
-        padding: 10px 0;
+        padding: 10px 0 7px;
     }
     .angular-google-map-container {
         height: 270px;
+    }
+    .business-listing {
+        width: 55%;
     }
 }
 @media screen and (min-width: 400px){
