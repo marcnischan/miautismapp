@@ -23,20 +23,15 @@
 
 <div class="search-result cf" ng-repeat="place in locations | filter:searchterm:county ">
     <a ng-href=#!/review/{{place.id}}>
-    <div class="business-type">
-        <img ng-src=/img/{{place.business.logotype}}.svg />
-    </div>
-    <div class="business-listing">
-        <h3>{{place.business.name}}</h3>
-        <span class="address">{{place.business.town}}</span>
-        <div class="overall-rating">
-            <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
-            <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
-            <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
-            <span class="star"><object type="image/svg+xml" data="/img/star.svg"></object></span>
+        <div class="business-type">
+            <img ng-src=/img/{{place.business.logotype}}.svg />
         </div>
-    </div>
+
+        <div class="business-listing">
+            <h3>{{place.business.name}}</h3>
+            <span class="address">{{place.business.town}}</span>
+        </div>
+
+        <star-rating score="place.business.rating.overall"></star-rating>
     </a>
 </div>
-
-

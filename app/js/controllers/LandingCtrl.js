@@ -90,6 +90,5 @@ App.controller('LandingCtrl', ['$scope', 'locations', 'geolocation', function($s
 
     locationService.getAll(function(locations) {
         $scope.locations = locations;
-    });
-        
+    });    
 }]);
