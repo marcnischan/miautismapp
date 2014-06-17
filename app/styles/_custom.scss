@@ -9,7 +9,7 @@ $text-color: #454741;
 $border-grey: #cecccc;
 
 body {
-    padding: 0 5px 0;
+    padding: 0;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 200;
     color: $text-color;
@@ -39,8 +39,12 @@ body {
 #miautism-logo {
     fill:#9DC53B;
 }
+.about .wrapper {
+    background-color: #fff;
+}
 .main-header {
     text-align: center;
+    
     .logo-link {
         display: table-cell;
         vertical-align: middle;
@@ -65,10 +69,15 @@ body {
         text-align: center;
         vertical-align: middle;
         width: 18%;
+        
+        img {
+            width: 65px;
+        }
     }
     .back-arrow {
         vertical-align: middle;
         margin-left: 1em;
+        float: left;
     }
     .placeholder {
         display: table-cell;
@@ -76,7 +85,10 @@ body {
     }
 }
 .footer-content {
-
+    .footer-wrapper {
+        max-width: 570px;
+        margin: auto;
+    }
     .footer {
         background-color: #f6f6f6;
         border-top: solid 1px $border-grey;
@@ -105,7 +117,6 @@ body {
         font-size: .8em;
         color: $mia-green;
         text-decoration: none;
-        border-bottom: solid 1px $border-grey;
 
         a:link, a:visited {
             color: $mia-green;
@@ -124,8 +135,9 @@ body {
 }
 star-rating {
     display: inline-block;
-    width: 35%;
-
+    width: 85px;
+    float: right;
+    
     .star {
         float: left;
         width: 12px;
@@ -179,7 +191,7 @@ star-rating {
         float: right;
         width: 23px;
         position: absolute;
-        right: 1em;
+        right: 1.5em;
         top: 1.5em;
     }
 }
@@ -208,7 +220,8 @@ star-rating {
     }
 }
 .business-type {
-    width: 9.375%; /* 60/640 */
+    width: 40px;
+    padding: 0 5px;
     float: left;
 }
 .search-result {
@@ -216,24 +229,25 @@ star-rating {
     font-size: $default-font-size;
     border-bottom: solid 1px #cecccc;
     padding: 1em 1em .65em;
-
+    min-height: 79px;
 
     &:last-child {
         margin-bottom: 0;
         border-bottom: none;
     }
-    .business-listing {
-        float: left;
-        width: 75%;
-        padding: 0 0 1em .65em;
-
-        .address {
-            display: block;
-            font: normal bold 10px/15px $default-font;
-        }
+    .address {
+        display: block;
+        font: normal bold 10px/15px $default-font;
     }
 }
-
+.business-type, .business-listing {
+    float: left;
+}
+.business-listing {
+    width: 65%;
+    font-size: $default-font-size;
+    padding-bottom: 1em;
+}
 
 /* ----------------------------------------------------styles for review page------------------- */
 .review {
@@ -247,14 +261,6 @@ star-rating {
         font: normal 200 0.6875em/1em $default-font;
         text-transform: uppercase;
         color: $mia-green;
-    }
-    .business-listing {
-        width: 65%;
-        font-size: $default-font-size;
-        padding-bottom: 1em;
-    }
-    .business-type, .business-listing {
-        float: left;
     }
 }
 .business-name {
@@ -322,10 +328,44 @@ star-rating {
         padding: 2em 0;
     }
 }
-
-
-
-@media screen and (max-width: 400px){
+@media screen and (min-width: 525px){
+    .footer-content {
+        .footer-blurb {
+            line-height: 2.25em;
+        }
+    }
+}
+@media screen and (max-width: 550px){
+    .angular-google-map-container {
+        height: 390px;
+    }
+}
+@media screen and (max-width: 680px){
+    .angular-google-map-container {
+        height: 480px;
+    }
+}
+@media screen and (max-width: 399px){
+    .miautism-logo { 
+        width: 176px;
+        margin: auto;
+        padding: 10px 0;
+    }
+    .angular-google-map-container {
+        height: 270px;
+    }
+}
+@media screen and (min-width: 400px){
+    .miautism-logo { 
+        width: 200px;
+        margin: auto;
+        padding: 15px 0;
+    }
+}
+@media screen and (min-width: 400px){
+    height: 54px;
+}
+@media screen and (max-width: 639px){
     body {
         padding: 0;
     }
@@ -333,3 +373,21 @@ star-rating {
         padding: 0;
     }
 }
+@media screen and (min-width: 640px){
+    .miautism-logo { 
+        width: 176px;
+        margin: auto;
+        padding: 15px 0;
+    }
+    .main-header {
+
+        .header-view {
+            border-bottom: none;
+        }
+    }
+    .angular-google-map-container {
+        height: 480px;
+    }
+}
+    
+    
