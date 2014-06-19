@@ -195,8 +195,8 @@
             "town": "Flat Rock",
             "county": "Wayne",
             "coords": {
-                "latitude": 42.0955595,
-                "longitude": -83.2727564
+                "latitude": 42.0960427,
+                "longitude": -83.2927018
             },
             "rating": {
                 "overall": "5",
@@ -430,8 +430,8 @@
             "town": "Detroit",
             "county": "Wayne",
             "coords": {
-                "latitude": 42.679731,
-                "longitude": -83.220544
+                "latitude": 42.331578,
+                "longitude": -83.046834
             },
             "rating": {
                 "overall": "3",
