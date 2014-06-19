@@ -130,12 +130,17 @@ body {
     .footer-blurb {
         float: left;
         width: 85%;
-        font: normal 200 .75em/1.25em $default-font;
         color: #86887f;
         padding: .5em 0 0 0;
         
         p {
+            font: normal 200 .75em/1.25em $default-font;
+            
             padding-top: 4px;
+            
+            a {
+                
+            }
         }
     }
 }
@@ -345,7 +350,9 @@ star-rating {
 @media screen and (min-width: 525px){
     .footer-content {
         .footer-blurb {
-            line-height: 2.5em;
+            p {
+                line-height: 2.5em;
+            }
         }
     }
 }
@@ -382,7 +389,7 @@ star-rating {
 @media screen and (min-width: 400px){
     height: 54px;
 }
-@media screen and (max-width: 639px){
+@media screen and (max-width: 640px){
     body {
         padding: 0;
     }
@@ -390,7 +397,7 @@ star-rating {
         padding: 0;
     }
 }
-@media screen and (min-width: 640px){
+@media screen and (min-width: 641px){
     .miautism-logo { 
         width: 176px;
         margin: auto;
