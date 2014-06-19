@@ -158,9 +158,6 @@ star-rating {
         fill: $mia-green;
     }
 }
-.angular-google-map-container {
-    height: 200px;
-}
 
 /* ----------------------------------------------------styles for landing page------------------- */
 
@@ -378,16 +375,20 @@ star-rating {
         padding: 15px 0;
     }
 }
-@media screen and (min-width: 400px){
-    height: 54px;
-}
 @media screen and (max-width: 768px){
-    body {
-        padding: 0;
-    }
     .container {
         padding: 0;
     }
+    body {
+        padding: 0;
+    }
+}
+@media screen and (min-width: 401px) and (max-width: 639px){
+    .angular-google-map-container {
+        height: 360px;
+    }
+}
+@media screen and (min-width: 640px) and (max-width: 768px){
     .angular-google-map-container {
         height: 480px;
     }
@@ -407,6 +408,9 @@ star-rating {
     }
     .angular-google-map-container {
         height: 480px;
+    }
+    .container {
+        max-width: 780px;
     }
 }
     
