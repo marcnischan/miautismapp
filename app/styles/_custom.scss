@@ -29,7 +29,7 @@ body {
 /* ----------------------------------------------------global defaults------------------------*/
 .wrapper {
     background-color: #f4f1ef;
-    
+
     .container {
         max-width: 640px;
         margin: auto;
@@ -44,7 +44,7 @@ body {
 }
 .main-header {
     text-align: center;
-    
+
     .logo-link {
         display: table-cell;
         vertical-align: middle;
@@ -69,7 +69,7 @@ body {
         text-align: center;
         vertical-align: middle;
         width: 18%;
-        
+
         img {
             width: 50px;
         }
@@ -132,9 +132,9 @@ body {
         width: 85%;
         color: #86887f;
         padding: .5em 0 0 0;
-        
+
         p {
-            font: normal 200 .75em/1.25em $default-font;
+            font: 200 .75em/1.25em $default-font;
             padding-top: 4px;
         }
     }
@@ -144,7 +144,7 @@ star-rating {
     width: 85px;
     float: right;
     padding-top: 3px;
-    
+
     .star {
         float: left;
         width: 12px;
@@ -237,11 +237,11 @@ star-rating {
     border-bottom: solid 1px #cecccc;
     padding: 1em 1em .65em;
     min-height: 79px;
-    
+
     h3{
         line-height: 1.25em;
     }
-    
+
     &:last-child {
         margin-bottom: 0;
         border-bottom: none;
@@ -265,7 +265,7 @@ star-rating {
     margin-bottom: 1em;
     padding: 1em 1em 0;
     border-top: solid 5px $mia-green;
-    
+
     star-rating {
         padding-top: 0;
     }
@@ -362,7 +362,7 @@ star-rating {
     }
 }
 @media screen and (max-width: 399px){
-    .miautism-logo { 
+    .miautism-logo {
         width: 176px;
         margin: auto;
         padding: 10px 0 7px;
@@ -375,7 +375,7 @@ star-rating {
     }
 }
 @media screen and (min-width: 400px){
-    .miautism-logo { 
+    .miautism-logo {
         width: 200px;
         margin: auto;
         padding: 15px 0;
@@ -393,7 +393,7 @@ star-rating {
     }
 }
 @media screen and (min-width: 641px){
-    .miautism-logo { 
+    .miautism-logo {
         width: 176px;
         margin: auto;
         padding: 15px 0;
@@ -408,5 +408,5 @@ star-rating {
         height: 480px;
     }
 }
-    
-    
+
+
