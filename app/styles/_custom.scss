@@ -410,7 +410,11 @@ star-rating {
         height: 480px;
     }
     .container {
-        max-width: 780px;
+        max-width: 769px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
