@@ -4,7 +4,7 @@
 </google-map>
 
 <div class="dropdown">
-    <a href="#!" class="main-dropdown" data-toggle="dropdown">
+    <a class="main-dropdown" data-toggle="dropdown">
         <h1 class="title">Recommendations in</h1>
         <div class="selected-county">{{searchterm}} County</div>
         <img class="dropdown-arrow" src="/img/dropdown-arrow.png" />
@@ -22,7 +22,7 @@
 </div>
 
 <div class="search-result cf" ng-repeat="place in locations | filter:searchterm:county ">
-    <a ng-href=#!/review/{{place.id}}>
+    <a ng-href="#!/review/{{place.id}}">
         <div class="business-type">
             <img ng-src=/img/{{place.business.logotype}}.svg />
         </div>
